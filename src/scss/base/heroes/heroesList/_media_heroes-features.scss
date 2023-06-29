@@ -1,0 +1,262 @@
+// @media (max-width: 1710px) {
+// 	.hero-features {
+// 		&__promo {
+// 			.promo__container {
+// 				.header {
+// 					grid-template-columns: 17% 65% 50px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+@media (max-width: 1440px ) {
+	.hero-features {
+		&__image {
+			max-height: 730px;
+		}
+		&__heroType {
+			.heroType-strength {
+				height: 40px;
+				width: 40px;
+			}
+			.heroType-agility {
+				height: 40px;
+				width: 40px;
+			}
+			.heroType-intelligence {
+				height: 40px;
+				width: 40px;
+			}
+		}
+		&__content {
+			.skills {
+				.skill__icon {
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.hero-features {
+		&__promo {
+			.promo__container {
+				.header {
+					grid-template-columns: 12% 85%;
+				}
+			}
+		}
+		&__image {
+			max-height: 700px;
+		}
+		&__heroType {
+			.heroType-strength {
+				height: 35px;
+				width: 35px;
+			}
+			.heroType-agility {
+				height: 35px;
+				width: 35px;
+			}
+			.heroType-intelligence {
+				height: 35px;
+				width: 35px;
+			}
+		}
+		&__content {
+			&__menu {
+				width: 50%;
+			}
+			.skills {
+				.skill__wrapper__name {
+					font-size: 18px;
+				}
+			}
+			&__lore {
+				// &::-webkit-scrollbar {
+				// 	-webkit-appearance: none;
+				// }
+				
+				// &::-webkit-scrollbar:vertical {
+				// 	width: 4px;
+				// }
+				
+				// &::-webkit-scrollbar:horizontal {
+				// 	height: 0;
+				// }
+				
+				// &::-webkit-scrollbar-thumb {
+				// 	background-color: rgba($color: #fff, $alpha: 0.2);    /* цвет плашки */
+				// 	border-radius: 20px;       /* закругления плашки */
+				// 	border: 0px solid #fff;  /* padding вокруг плашки */
+				// }
+				
+				// &::-webkit-scrollbar-track {
+				// 	border-radius: 10px;  
+				// 	background-color: transparent; 
+				// }
+			}
+		}
+	}
+}
+@media (max-width: 991px) {
+	.hero-features {
+		&__promo-subtitle {
+			display: none;
+		}
+		&__promo-title {
+			font-size: 44px;
+		}
+		&__image {
+			min-width: 230px;
+			max-height: 540px;
+		}
+		&__name {
+			font-size: 34px;
+		}
+		&__heroType {
+			.heroType-strength {
+				height: 32px;
+				width: 32px;
+			}
+			.heroType-agility {
+				height: 32px;
+				width: 32px;
+			}
+			.heroType-intelligence {
+				height: 32px;
+				width: 32px;
+			}
+		}
+		&__content {
+			&__menu {
+				width: 60%;
+			}
+			.skills {
+				.skill__icon {
+					width: 65%;
+				}
+				.skill__wrapper__name {
+					font-size: 15px;
+				}
+			}
+			.skill__descr__wrapper__text {
+				font-size: 16px;
+				&::-webkit-scrollbar {
+					-webkit-appearance: none;
+				}
+				
+				&::-webkit-scrollbar:vertical {
+					width: 4px;
+				}
+				
+				&::-webkit-scrollbar:horizontal {
+					height: 0;
+				}
+				
+				&::-webkit-scrollbar-thumb {
+					background-color: rgba($color: #fff, $alpha: 0.2);    /* цвет плашки */
+					border-radius: 20px;       /* закругления плашки */
+					border: 0px solid #fff;  /* padding вокруг плашки */
+				}
+				
+				&::-webkit-scrollbar-track {
+					border-radius: 10px;  
+					background-color: transparent; 
+				}
+			}
+		}
+	}
+	
+}
+@media (max-width: 767px) {
+	.hero-features {
+		flex-direction: column;
+		&__promo {
+			.promo__container {
+				.promo__bottom {
+					width: 250px;
+					bottom: 10%;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+		&__image {
+			min-width: 86%;
+			min-height: 280px;
+			&__wrapper {
+				bottom: 50px;
+			}
+		}
+		&__name {
+			font-size: 32px;
+		}
+		&__heroType {
+			.heroType-strength {
+				height: 40px;
+				width: 40px;
+			}
+			.heroType-agility {
+				height: 40px;
+				width: 40px;
+			}
+			.heroType-intelligence {
+				height: 40px;
+				width: 40px;
+			}
+		}
+		&__content {
+			height: 100%;
+			width: 100%;
+			padding: 0; 
+			margin-left: 0;
+			.skills {
+				.skill__icon {
+					width: 55%;
+				}
+			}
+			&__lore {
+				padding: 0px 20px 0 20px;
+			}
+			.skill__descr__video {
+				width: 100%;
+			}
+		}
+	}
+}
+@media (max-width: 575px) {
+	.hero-features {
+		&__content {
+			&__menu {
+				width: 70%;
+				&__abilities {
+					font-size: 23px;
+				}
+				&__lore {
+					font-size: 23px;
+				}
+			}
+			.skills {
+				.skill__icon {
+					width: 80%;
+				}
+				.skill__wrapper__name {
+					font-size: 12px;
+				}
+			}
+			.skill__descr__icon {
+				width: 25%;
+			}
+			.skill__descr__wrapper__name {
+				font-size: 20px;
+			}
+			.skill__descr__wrapper__text {
+				font-size: 15px;
+			}
+			&__lore {
+				font-size: 16px;
+			}
+		}
+	}
+}

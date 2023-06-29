@@ -1,0 +1,77 @@
+// @media (max-width: 1710px) {
+// 	body.lightTheme {
+// 		.promo{
+// 			&__title {
+// 				font-size: 49px;
+// 			}
+// 		}
+// 	}
+// }
+@media (max-width: 1440px) {
+	body.lightTheme {
+		.header {
+			.changeTheme {
+				width: 45px;
+				height: 45px;
+				span {
+					font-size: 45px;
+				}
+			}
+		}
+		// .promo {
+		// 	&__title {
+		// 		font-size: 36px;
+		// 		line-height: 36px;
+		// 	}
+		// 	&__bottom {
+		// 		.steamBtn {
+		// 			//margin-right: 20px;
+		// 		}
+		// 	}
+		// }
+		// .steamBtn {
+		// 	width: 320px;
+		// }
+	}
+}
+@media (max-width: 1200px) {
+	body.lightTheme {
+		.header {
+			.changeTheme {
+				width: 40px;
+				height: 40px;
+				span {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	body.lightTheme {
+		.mobileHeader {
+			&__menu {
+				&__btn {
+					background-color: rgb(230, 230, 230);
+					color: #000;
+				}
+			}
+			&__logo{
+				img{
+					content: url('/src/icons/dota2_logo_blue.png');
+				}
+			}
+		}
+	}
+}
+@media  (max-width: 440px) {
+	body.lightTheme {
+		.promo__bottom {
+			width: 100%;
+			&__wrap {
+				padding: 0;
+			}
+		}
+	}
+	
+}

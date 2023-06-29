@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dota 2</title>
+	<link rel="stylesheet" href="/src/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="/src/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/src/css/font.css">
+	<link rel="stylesheet" href="/src/css/style.min.css">
+	<script src="/src/js/heroesPages/abaddon.js" defer></script>
+	<script src="/src/js/app.js" defer></script>
+
+</head>
+<body>
+	<div class="mobileHeader">
+		<div class="changeTheme">
+			<span class="icon-IcoMoon"></span>
+		</div>
+		<div class="mobileHeader__container">
+			<a href="/src/index.html" class="mobileHeader__logo">
+				<img src="/src/icons/dota2_logo_red.png" alt="logo">
+			</a>
+			<nav>
+				<ul class="header__menu mobileHeader__menu">
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">игра</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/heroes.html" class="header__menu__btn mobileHeader__menu__btn">герои</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">новости</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">киберспорт</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<section class="promo hero-features__promo">
+		<!-- <div data-speed=".10" class="layer layer__base"></div>
+		<div data-speed=".6" class="layer layer__middle"></div> -->
+		<div data-speed=".9" class="layer layer__base layer__hero"></div>
+		<div class="promo__container">
+			<header class="header">
+				<a href="/src/index.html" class="header__logo">
+					<img src="/src/icons/dota2_logo_red.png" alt="logo">
+				</a>
+				<nav>
+					<ul class="header__menu">
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">игра</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/heroes.html" class="header__menu__btn">герои</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/news.html" class="header__menu__btn">новости</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">киберспорт</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+					<span class="icon-steam_logo"></span>
+					<span>играть бесплатно</span> 
+				</a>
+				<div class="changeTheme">
+					<span class="icon-IcoMoon"></span>
+				</div>
+			</header>
+				<div class="hero-features herolist-heroPage">	
+					<div class="hero-features__image herolist-heroPage__image__abaddon">
+						<div class="hero-features__image__wrapper">
+							<div class="hero-features__name herolist-heroPage__name">Abaddon</div>
+							<div class="hero-features__heroType strength-main">
+								<div class="heroType-strength"></div>
+								<div class="heroType-agility"></div>
+								<div class="heroType-intelligence"></div>
+							</div>
+						</div>
+						<div class="hero-features__image__descr">
+							Abaddon, способный лечиться за счёт вражеских атак, может 
+							пережить почти любое нападение. Он всегда готов вклиниться в битву, закрывая союзников 
+							щитом и запуская обоюдоострые витки мглы, которыми он увечит врагов и исцеляет товарищей.
+						</div>
+						<div class="hero-features__image__fadeContainer"></div>
+					</div>
+					<div class="hero-features__content">
+						<div class="hero-features__content__menu">
+							<div class="hero-features__content__menu__abilities">abilities</div>
+							<div class="hero-features__content__menu__lore">lore</div>
+						</div>
+						<div class="hero-features__content__abilities active">
+							<ul class="skills">
+								<li class="skill" id="skill-1">
+									<img src="/src/img/heroesList/heroes/abaddon/skills/abaddon_death_coil.png" alt="abaddon_death_coil" class="skill__icon skill__icon-1">
+									<div class="skill__wrapper">
+										<div class="skill__wrapper__name">MIST COIL</div>
+									</div>
+								</li>
+								<li class="skill" id="skill-2">
+									<img src="/src/img/heroesList/heroes/abaddon/skills/abaddon_aphotic_shield.png" alt="abaddon_death_coil" class="skill__icon">
+									<div class="skill__wrapper">
+										<div class="skill__wrapper__name">APHOTIC SHIELD</div>
+									</div>
+								</li>
+								<li class="skill" id="skill-3">
+									<img src="/src/img/heroesList/heroes/abaddon/skills/abaddon_frostmourne.png" alt="abaddon_death_coil" class="skill__icon">
+									<div class="skill__wrapper">
+										<div class="skill__wrapper__name">CURSE OF AVERNUS</div>
+									</div>
+								</li>
+								<li class="skill" id="skill-4">
+									<img src="/src/img/heroesList/heroes/abaddon/skills/abaddon_borrowed_time.png" alt="abaddon_death_coil" class="skill__icon">
+									<div class="skill__wrapper">
+										<div class="skill__wrapper__name">BORROWED TIME</div>
+									</div>
+								</li>
+							</ul>
+							<div class="skill__descr">
+								<div class="skill__descr__characteristic">
+									<img src="/src/img/heroesList/heroes/abaddon/skills/abaddon_death_coil.png" alt="abaddon_death_coil" class="skill__descr__icon">
+									<div class="skill__descr__wrapper">
+										<div class="skill__descr__wrapper__name">MIST COIL</div>
+										<div class="skill__descr__wrapper__text">Ценой собственного здоровья выпускает смертельный туман, который наносит урон врагу или лечит союзника.</div>
+									</div>
+								</div>
+								<video class="skill__descr__video" autoplay="" preload="auto" loop="" playsinline="" muted="">
+									<source class="video-source-webm" type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/abaddon/abaddon_death_coil.webm">
+									<source class="video-source-mp4" type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/abaddon/abaddon_death_coil.mp4">
+								</video>
+							</div>
+						</div>
+						<div class="hero-features__content__lore">
+							Род Аверно питает купель — разлом в земной тверди, который испускает загадочную энергию на протяжении поколений. Каждого новорождённого семьи окунают в этот тёмный туман, даруя тем самым связь с их землёй и её загадочной силой. Дети растут с непреклонной верой в защиту семейных ценностей и традиций земли, но на самом деле они охраняют саму купель, истинные намерения которой неизвестны.<br>
+							Когда новорождённый Abaddon проходил обряд крещения, что-то пошло не так. В глазах малыша сверкнула искра разума, испугавшая всех присутствовавших и заставившая жрецов шептаться. Его растили, дабы он пошёл по пути всех отпрысков рода: война и защита родины во главе армии. Но сам Abaddon уделял этому не так много внимания. Пока другие тренировались в обращении с оружием, он медитировал у купели. Он глубоко вдыхал тёмный туман, учась быть единым с той силой, что протекала глубоко под землёй его дома. В конечном счёте он стал порождением чёрного тумана. <br>
+							Род Аверно неодобрительно отнёсся к такому решению, обвиняя его в пренебрежении обязанностями. Но все эти обвинения прекратились, когда Abaddon вступил в свою первую битву и показал ту обретённую власть над жизнью и смертью, о которой другие члены рода не могли и мечтать.
+						</div>
+					</div>
+				</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="section__title">
+			<div class="section__title__smokeTop"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<img class="dotalogo" src="/src/icons/dota2_logo_red.png" alt="">
+				</div>
+				<div class="col-md-8">
+					<div class="footer__descr"> 
+						Dota и логотип Dota являются товарными знаками и/или зарегистрированными товарными знаками Wolf Corporation. 2023
+						Wolf Corporation, все права защищены.
+					</div>
+				</div>
+				<div class="col-md-2">
+					<img class="vaclogo" src="https://pic.rutubelist.ru/video/78/e9/78e9e07a74662f8966f8c70c08ed794b.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,781 @@
+.heroesPage {
+	padding: 45px 0 65px 0;
+	//background-color: rgb(215, 215, 215);
+	background-image: url('/src/img/heroes/heroes_back.jpg');
+	background-attachment: fixed;
+	overflow: hidden;
+	&__promo {
+		
+		.promo__bottom {
+			max-width: 1500px;
+			bottom: 30%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	&__wrapper {
+		min-height: 1080px;
+		padding: 50px 0;
+		&__content {
+			&__subtitle{
+				font-weight: 700;
+				font-size: 32px;
+				text-align: center;
+				color: #fff;
+				text-transform: uppercase;
+			}
+			&__title {
+				font-weight: 700;
+				font-size: 52px;
+				text-align: center;
+				color: #fff;
+				text-transform: uppercase;
+			}
+			&__descr {
+				display: block;
+				max-width: 1100px;
+				margin: 0 auto;
+				font-weight: 700;
+				font-size: 28px;
+				text-align: center;
+				color: #fff;
+			}
+		}
+		&__menu {
+			display: block;
+			margin: 50px auto;
+		}
+	}
+}
+
+.strength {
+	transition: all 0.3s;
+}
+.agility {
+	transition: all 0.3s;
+}
+.intelligence{
+	transition: all 0.3s;
+}
+
+.hiddenHero {
+	opacity: 0;
+	max-width: 0;
+	padding: 0;
+}
+
+.hiddenDifficult {
+	opacity: 0;
+	max-width: 0;
+	padding: 0;
+}
+
+.heroes__Nav {
+	height: 8vh;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 25px;
+	background-color: rgba($color: #000000, $alpha: 0.4);
+	margin-bottom: 20px;
+	&__search {
+		font-size: 26px;
+		font-weight: 500;
+		color: #fff;
+	}
+	&__filter {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&__attribute {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&__text {
+				font-size: 24px;
+				font-weight: 500;
+				color: #fff;
+				margin-right: 10px;
+			}
+		}
+		&__complexity {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-left: 8vh;
+			&__text {
+				font-size: 24px;
+				font-weight: 500;
+				color: #fff;
+			}
+			button {
+				margin-left: 15px;
+				width: 27px;
+				height: 27px;
+			}
+		}
+		.btn {
+			position: relative;
+			margin-left: 5px;
+			width: 35px;
+			height: 35px;
+			border: none;
+			overflow: hidden;
+			background-color: rgb(40, 40, 40);
+			&::after{
+				content: "";
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 60%;
+				padding-top: 55%;
+				background-color: rgb(253, 253, 253);
+				filter: brightness(0.4);
+				transform: translate(50%, -50%) rotate(45deg);
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: -5px;
+				width: 135%;
+				padding-top: 30%;
+				background-color: rgb(253, 253, 253);
+				filter: brightness(0.4);
+				transform: translate(-50%, -50%) rotate(225deg);
+			}
+			&__item,&__itemLvl {
+				width: 80%;
+				height: 80%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				filter: brightness(0.4);
+				transition: all 0.3s;
+				cursor: pointer;
+				&__active {
+					filter: brightness(1);
+					.btn::after {
+						filter: brightness(1);
+					}
+					.btn::before {
+						filter: brightness(1);
+					}
+				}
+			}
+			&:hover {
+				.btn__item {
+					filter: brightness(1);
+				}
+			}
+			.strengthItem {
+				background: url('/src/img/heroes/attributes/hero_strength.png') center (center / cover) no-repeat;
+			}
+			.agilityItem {
+				background: url('/src/img/heroes/attributes/hero_agility.png') center (center / cover) no-repeat;
+			}
+			.intelligenceItem {
+				background: url('/src/img/heroes/attributes/hero_intelligence.png') center (center / cover) no-repeat;
+			}
+			.btn__itemLvl {
+				background: url('/src/img/heroes/attributes/level_min2.png') center (center / cover) no-repeat;
+			}
+		}
+	}
+}
+
+form {
+	width: 300px;
+	margin: 0 auto;
+	input::-webkit-search-cancel-button {
+		display: none;
+	}
+}
+
+input {
+	width: 100%;
+	height: 42px;
+	padding-left: 10px;
+	border: 0;
+	outline: none;
+	background: transparent;
+	background-color: #1c1c1c;
+	color: #ffffff;
+}
+
+.hero {
+	display: block;
+	margin-top: 30px;
+	position: relative;
+	height: 100px;
+	cursor: pointer;
+	transition: all 0.4s;
+	overflow: hidden;
+	&__fadeContainer {
+		width: 100%;
+		height: 160%;
+		position: absolute;
+		pointer-events: none;
+		left: 0px;
+		bottom: -20%;
+		right: 0px;
+		background-color: black;
+		background: linear-gradient(rgba(19, 23, 28, 0) 75%, rgba(19, 23, 28, 0.733) 90%, rgb(19, 23, 28) 95%);//60 70 90
+		transition: 0.9s;
+		z-index: 1;
+	}
+	&__img{
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	&__content {
+		width: 90%;
+		position: absolute;
+		left: 50%;
+		bottom: -60%;
+		transform: translateX(-50%);
+		text-align: center;
+		font-size: 20px;
+		font-weight: 500;
+		color: #fff;
+		z-index: 2;
+		text-transform: uppercase;
+		transition: all 0.5s;
+	}
+	&:hover {
+		.hero__fadeContainer {
+			bottom: 0;
+			background-color: rgba($color: #000000, $alpha: 0.2);
+		}
+		.hero__img::after {
+			right: -10%;
+			top: -10%;
+		}
+		.hero__content {
+			bottom: 2%;
+		}
+		transform: scale(1.3);
+		z-index: 4;
+	}
+}
+.abaddon {
+	background: url('/src/img/heroes_icon/abaddon.png') center (center / cover) no-repeat;
+}
+.alchemist {
+	background: url('/src/img/heroes_icon/alchemist.png') center (center / cover) no-repeat;
+}
+.AncientApparition {
+	background: url('/src/img/heroes_icon/ancient_apparition.png') center (center / cover) no-repeat;
+}
+.AntiMage {
+	background: url('/src/img/heroes_icon/antimage.png') center (center / cover) no-repeat;
+}
+.ArkWarden {
+	background: url('/src/img/heroes_icon/arc_warden.png') center (center / cover) no-repeat;
+}
+.Axe {
+	background: url('/src/img/heroes_icon/axe.png') center (center / cover) no-repeat;
+}
+.Bane {
+	background: url('/src/img/heroes_icon/bane.png') center (center / cover) no-repeat;
+}
+.Batrider {
+	background: url('/src/img/heroes_icon/batrider.png') center (center / cover) no-repeat;
+}
+.Beastmaster {
+	background: url('/src/img/heroes_icon/beastmaster.png') center (center / cover) no-repeat;
+}
+.Bloodseeker {
+	background: url('/src/img/heroes_icon/bloodseeker.png') center (center / cover) no-repeat;
+}
+.BountyHunter {
+	background: url('/src/img/heroes_icon/bounty_hunter.png') center (center / cover) no-repeat;
+}
+.Brewmaster {
+	background: url('/src/img/heroes_icon/brewmaster.png') center (center / cover) no-repeat;
+}
+.Bristleback {
+	background: url('/src/img/heroes_icon/bristleback.png') center (center / cover) no-repeat;
+}
+.Broodmother {
+	background: url('/src/img/heroes_icon/broodmother.png') center (center / cover) no-repeat;
+}
+.CentaurWarrunner {
+	background: url('/src/img/heroes_icon/centaur.png') center (center / cover) no-repeat;
+}
+.ChaosKnight {
+	background: url('/src/img/heroes_icon/chaos_knight.png') center (center / cover) no-repeat;
+}
+.Chen {
+	background: url('/src/img/heroes_icon/chen.png') center (center / cover) no-repeat;
+}
+.Clinkz {
+	background: url('/src/img/heroes_icon/clinkz.png') center (center / cover) no-repeat;
+}
+.Clockwerk {
+	background: url('/src/img/heroes_icon/clockwerk.png') center (center / cover) no-repeat;
+}
+.crystalmaiden {
+	background: url('/src/img/heroes_icon/crystal_maiden.png') center (center / cover) no-repeat;
+}
+.darkseer {
+	background: url('/src/img/heroes_icon/dark_seer.png') center (center / cover) no-repeat;
+}
+.darkwillow {
+	background: url('/src/img/heroes_icon/dark_willow.png') center (center / cover) no-repeat;
+}
+.dawnbreaker {
+	background: url('/src/img/heroes_icon/dawnbreaker.png') center (center / cover) no-repeat;
+}
+.dazzle {
+	background: url('/src/img/heroes_icon/dazzle.png') center (center / cover) no-repeat;
+}
+.deathprophet {
+	background: url('/src/img/heroes_icon/death_prophet.png') center (center / cover) no-repeat;
+}
+.disruptor {
+	background: url('/src/img/heroes_icon/disruptor.png') center (center / cover) no-repeat;
+}
+.doom {
+	background: url('/src/img/heroes_icon/doom.png') center (center / cover) no-repeat;
+}
+.dragonknight {
+	background: url('/src/img/heroes_icon/dragon_knight.png') center (center / cover) no-repeat;
+}
+.drowranger {
+	background: url('/src/img/heroes_icon/drow_ranger.png') center (center / cover) no-repeat;
+}
+.earthspirit {
+	background: url('/src/img/heroes_icon/earth_spirit.png') center (center / cover) no-repeat;
+}
+.earthshaker {
+	background: url('/src/img/heroes_icon/earthshaker.png') center (center / cover) no-repeat;
+}
+.eldertitan {
+	background: url('/src/img/heroes_icon/elder_titan.png') center (center / cover) no-repeat;
+}
+.emberspirit {
+	background: url('/src/img/heroes_icon/ember_spirit.png') center (center / cover) no-repeat;
+}
+.enchantress {
+	background: url('/src/img/heroes_icon/enchantress.png') center (center / cover) no-repeat;
+}
+.enigma {
+	background: url('/src/img/heroes_icon/enigma.png') center (center / cover) no-repeat;
+}
+.facelessvoid {
+	background: url('/src/img/heroes_icon/faceless_void.png') center (center / cover) no-repeat;
+}
+.grimstroke {
+	background: url('/src/img/heroes_icon/grimstroke.png') center (center / cover) no-repeat;
+}
+.gyrocopter {
+	background: url('/src/img/heroes_icon/gyrocopter.png') center (center / cover) no-repeat;
+}
+.hoodwink {
+	background: url('/src/img/heroes_icon/hoodwink.png') center (center / cover) no-repeat;
+}
+.huskar {
+	background: url('/src/img/heroes_icon/huskar.png') center (center / cover) no-repeat;
+}
+.invoker {
+	background: url('/src/img/heroes_icon/invoker.png') center (center / cover) no-repeat;
+}
+.io {
+	background: url('/src/img/heroes_icon/wisp.png') center (center / cover) no-repeat;
+}
+.jakiro {
+	background: url('/src/img/heroes_icon/jakiro.png') center (center / cover) no-repeat;
+}
+.juggernaut {
+	background: url('/src/img/heroes_icon/juggernaut.png') center (center / cover) no-repeat;
+}
+.keeperofthelight {
+	background: url('/src/img/heroes_icon/keeper_of_the_light.png') center (center / cover) no-repeat;
+}
+.kunkka {
+	background: url('/src/img/heroes_icon/kunkka.png') center (center / cover) no-repeat;
+}
+.legioncommander {
+	background: url('/src/img/heroes_icon/legion_commander.png') center (center / cover) no-repeat;
+}
+.leshrac {
+	background: url('/src/img/heroes_icon/leshrac.png') center (center / cover) no-repeat;
+}
+.lich {
+	background: url('/src/img/heroes_icon/lich.png') center (center / cover) no-repeat;
+}
+.lifestealer {
+	background: url('/src/img/heroes_icon/life_stealer.png') center (center / cover) no-repeat;
+}
+.lina {
+	background: url('/src/img/heroes_icon/lina.png') center (center / cover) no-repeat;
+}
+.lion {
+	background: url('/src/img/heroes_icon/lion.png') center (center / cover) no-repeat;
+}
+.lonedruid {
+	background: url('/src/img/heroes_icon/lone_druid.png') center (center / cover) no-repeat;
+}
+.luna {
+	background: url('/src/img/heroes_icon/luna.png') center (center / cover) no-repeat;
+}
+.lycan {
+	background: url('/src/img/heroes_icon/lycan.png') center (center / cover) no-repeat;
+}
+.magnus {
+	background: url('/src/img/heroes_icon/magnus.png') center (center / cover) no-repeat;
+}
+.marci {
+	background: url('/src/img/heroes_icon/marci.png') center (center / cover) no-repeat;
+}
+.mars {
+	background: url('/src/img/heroes_icon/mars.png') center (center / cover) no-repeat;
+}
+.medusa {
+	background: url('/src/img/heroes_icon/medusa.png') center (center / cover) no-repeat;
+}
+.meepo {
+	background: url('/src/img/heroes_icon/meepo.png') center (center / cover) no-repeat;
+}
+.mirana {
+	background: url('/src/img/heroes_icon/mirana.png') center (center / cover) no-repeat;
+}
+.monkeyking {
+	background: url('/src/img/heroes_icon/monkey_king.png') center (center / cover) no-repeat;
+}
+.morfling {
+	background: url('/src/img/heroes_icon/morphling.png') center (center / cover) no-repeat;
+}
+.muerta {
+	background: url('/src/img/heroes_icon/muerta.png') center (center / cover) no-repeat;
+}
+.nagasiren {
+	background: url('/src/img/heroes_icon/naga_siren.png') center (center / cover) no-repeat;
+}
+.Naturesprophet {
+	background: url('/src/img/heroes_icon/furion.png') center (center / cover) no-repeat;
+}
+.necrophos {
+	background: url('/src/img/heroes_icon/necrophos.png') center (center / cover) no-repeat;
+}
+.nightstalker {
+	background: url('/src/img/heroes_icon/night_stalker.png') center (center / cover) no-repeat;
+}
+.nyxassassin {
+	background: url('/src/img/heroes_icon/nyx_assassin.png') center (center / cover) no-repeat;
+}
+.ogremagi {
+	background: url('/src/img/heroes_icon/ogre_magi.png') center (center / cover) no-repeat;
+}
+.omniknight {
+	background: url('/src/img/heroes_icon/omniknight.png') center (center / cover) no-repeat;
+}
+.oracle {
+	background: url('/src/img/heroes_icon/oracle.png') center (center / cover) no-repeat;
+}
+.obsidiandestroyer {
+	background: url('/src/img/heroes_icon/obsidian_destroyer.png') center (center / cover) no-repeat;
+}
+.pangolier {
+	background: url('/src/img/heroes_icon/pangolier.png') center (center / cover) no-repeat;
+}
+.phantomassassin {
+	background: url('/src/img/heroes_icon/phantom_assassin.png') center (center / cover) no-repeat;
+}
+.phantomlancer {
+	background: url('/src/img/heroes_icon/phantom_lancer.png') center (center / cover) no-repeat;
+}
+.phoenix {
+	background: url('/src/img/heroes_icon/phoenix.png') center (center / cover) no-repeat;
+}
+.primalbeast {
+	background: url('/src/img/heroes_icon/primal_beast.png') center (center / cover) no-repeat;
+}
+.puck {
+	background: url('/src/img/heroes_icon/puck.png') center (center / cover) no-repeat;
+}
+.pudge {
+	background: url('/src/img/heroes_icon/pudge.png') center (center / cover) no-repeat;
+}
+.pugna {
+	background: url('/src/img/heroes_icon/pugna.png') center (center / cover) no-repeat;
+}
+.queenofpain {
+	background: url('/src/img/heroes_icon/queenofpain.png') center (center / cover) no-repeat;
+}
+.razor {
+	background: url('/src/img/heroes_icon/razor.png') center (center / cover) no-repeat;
+}
+.riki {
+	background: url('/src/img/heroes_icon/riki.png') center (center / cover) no-repeat;
+}
+.rubick {
+	background: url('/src/img/heroes_icon/rubick.png') center (center / cover) no-repeat;
+}
+.sandking {
+	background: url('/src/img/heroes_icon/sand_king.png') center (center / cover) no-repeat;
+}
+.shadowdemon {
+	background: url('/src/img/heroes_icon/shadow_demon.png') center (center / cover) no-repeat;
+}
+.shadowfiend {
+	background: url('/src/img/heroes_icon/nevermore.png') center (center / cover) no-repeat;
+}
+.shadowshaman {
+	background: url('/src/img/heroes_icon/shadow_shaman.png') center (center / cover) no-repeat;
+}
+.silencer {
+	background: url('/src/img/heroes_icon/silencer.png') center (center / cover) no-repeat;
+}
+.Skywrathmage {
+	background: url('/src/img/heroes_icon/skywrath_mage.png') center (center / cover) no-repeat;
+}
+.slardar {
+	background: url('/src/img/heroes_icon/slardar.png') center (center / cover) no-repeat;
+}
+.sralk {
+	background: url('/src/img/heroes_icon/slark.png') center (center / cover) no-repeat;
+}
+.snapfire {
+	background: url('/src/img/heroes_icon/snapfire.png') center (center / cover) no-repeat;
+}
+.sniper {
+	background: url('/src/img/heroes_icon/sniper.png') center (center / cover) no-repeat;
+}
+.spectre {
+	background: url('/src/img/heroes_icon/spectre.png') center (center / cover) no-repeat;
+}
+.spiritbreaker {
+	background: url('/src/img/heroes_icon/spirit_breaker.png') center (center / cover) no-repeat;
+}
+.stormspirit {
+	background: url('/src/img/heroes_icon/storm_spirit.png') center (center / cover) no-repeat;
+}
+.sven {
+	background: url('/src/img/heroes_icon/sven.png') center (center / cover) no-repeat;
+}
+.techies {
+	background: url('/src/img/heroes_icon/techies.png') center (center / cover) no-repeat;
+}
+.templarassassin {
+	background: url('/src/img/heroes_icon/templar_assassin.png') center (center / cover) no-repeat;
+}
+.terrorblade {
+	background: url('/src/img/heroes_icon/terrorblade.png') center (center / cover) no-repeat;
+}
+.tidehunter {
+	background: url('/src/img/heroes_icon/tidehunter.png') center (center / cover) no-repeat;
+}
+.timbersaw {
+	background: url('/src/img/heroes_icon/shredder.png') center (center / cover) no-repeat;
+}
+.tinker {
+	background: url('/src/img/heroes_icon/tinker.png') center (center / cover) no-repeat;
+}
+.tiny {
+	background: url('/src/img/heroes_icon/tiny.png') center (center / cover) no-repeat;
+}
+.treantprotector {
+	background: url('/src/img/heroes_icon/treant.png') center (center / cover) no-repeat;
+}
+.trollwarlord {
+	background: url('/src/img/heroes_icon/troll_warlord.png') center (center / cover) no-repeat;
+}
+.tusk {
+	background: url('/src/img/heroes_icon/tusk.png') center (center / cover) no-repeat;
+}
+.underlord {
+	background: url('/src/img/heroes_icon/abyssal_underlord.png') center (center / cover) no-repeat;
+}
+.undying {
+	background: url('/src/img/heroes_icon/undying.png') center (center / cover) no-repeat;
+}
+.ursa {
+	background: url('/src/img/heroes_icon/ursa.png') center (center / cover) no-repeat;
+}
+.vengefulspirit {
+	background: url('/src/img/heroes_icon/vengefulspirit.png') center (center / cover) no-repeat;
+}
+.venomancer {
+	background: url('/src/img/heroes_icon/venomancer.png') center (center / cover) no-repeat;
+}
+.viper {
+	background: url('/src/img/heroes_icon/viper.png') center (center / cover) no-repeat;
+}
+.visage {
+	background: url('/src/img/heroes_icon/visage.png') center (center / cover) no-repeat;
+}
+.voidspirit {
+	background: url('/src/img/heroes_icon/void_spirit.png') center (center / cover) no-repeat;
+}
+.warlock {
+	background: url('/src/img/heroes_icon/warlock.png') center (center / cover) no-repeat;
+}
+.weaver {
+	background: url('/src/img/heroes_icon/weaver.png') center (center / cover) no-repeat;
+}
+.windranger {
+	background: url('/src/img/heroes_icon/windranger.png') center (center / cover) no-repeat;
+}
+.winterwyvern {
+	background: url('/src/img/heroes_icon/winter_wyvern.png') center (center / cover) no-repeat;
+}
+.witchdoctor {
+	background: url('/src/img/heroes_icon/witch_doctor.png') center (center / cover) no-repeat;
+}
+.wraithking {
+	background: url('/src/img/heroes_icon/skeleton_king.png') center (center / cover) no-repeat;
+}
+.zeus {
+	background: url('/src/img/heroes_icon/zeus.png') center (center / cover) no-repeat;
+}
+
+#heroes-carousel {
+	margin-top: 150px;
+}
+
+.carousel-hero {
+	width: 90vw;
+	height: 100vh;
+	margin: 0 auto;
+	background: url('/src/img/heroesList/greyfade.png') center (center / cover) no-repeat;
+	position: relative;
+	&__image {
+		background: url('/src/img/heroesList/heroes/abaddon/abaddon.jpg') center (center / cover) no-repeat;
+		height: 75%;
+		width: 25%;
+		position: relative;
+		margin-left: 7%;
+		margin-top: 8%;
+		display: inline-block;
+		//margin: 0 auto;
+	}
+	&__name {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: 700;
+		font-size: 44px;
+		color: rgb(248, 248, 248);
+		text-transform: uppercase;
+	}
+	&__content {
+		height: 100%;
+		width: 58%;
+		padding: 25px 10px 15px 25px;
+		margin-left: 15px;
+		background-color: transparent;
+		display: inline-block;
+		position: absolute;
+		&__menu {
+			width: 40%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			&__abilities {
+				text-transform: uppercase;
+				font-weight: 500;
+				font-size: 28px;
+				color: #fff;
+				cursor: pointer;
+			}
+			&__lore {
+				text-transform: uppercase;
+				font-weight: 500;
+				font-size: 28px;
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+		&__lore {
+			display: none;
+			color: #fff;
+			font-size: 20px;
+			margin-top: 7%;
+		}
+		&__abilities {
+			display: none;
+		}
+		.active {
+			display: block;
+		}
+		.skills {
+			width: 100%;
+			list-style-type: none;
+			padding-left: 15px;
+			display: flex;
+			.skill {
+				width: 100%;
+				margin-top: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				cursor: pointer;
+				overflow: hidden;
+				&__icon {
+					width: 30%;
+					transform: translateX(25%);
+				}
+				&__wrapper {
+					margin-left: 20px;
+					width: 100%;
+					&__name {
+						font-weight: 700;
+						font-size: 22px;
+						color: #fff;
+						text-align: center;
+					}
+				}
+			}
+		}
+		.skill__descr {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			&__characteristic {
+				width: 85%;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			&__icon {
+				width: 20%;
+			}
+			&__wrapper {
+				margin-left: 6%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				&__name {
+					font-weight: 700;
+					font-size: 22px;
+					color: #fff;
+					text-align: center;
+				}
+				&__text {
+					font-weight: 500;
+					font-size: 18px;
+					color: #fff;
+					text-align: center;
+				}
+			}
+			&__video {
+				margin-top: 6%;
+				width: 90%;
+			}
+		}
+	}
+}

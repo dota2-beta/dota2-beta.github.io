@@ -1,0 +1,52 @@
+@media (max-width: 991px) {
+	.heroes__Nav {
+		height: 125px;
+		flex-direction: column;
+	}
+}
+@media (max-width: 767px) {
+	.heroes__Nav {
+		&__filter {
+			&__attribute__text {
+				font-size: 22px;
+			}
+			.btn {
+				width: 28px;
+				height: 28px;
+			}
+			&__complexity__text {
+				font-size: 22px;
+			}
+		}
+	}
+}
+@media (max-width: 575px) { 
+	.heroes__Nav {
+		height: 140px;
+		flex-direction: column;
+		&__filter {
+			flex-direction: column;
+			&__complexity {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+	form {
+		width: 265px;
+	}
+	.heroesPage__promo {
+		.promo__container {
+			.promo__bottom {
+				width: 250px;
+				bottom: 10%;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.promo__title {
+				font-size: 29px;
+				line-height: 40px;
+			}
+		}
+	}
+}

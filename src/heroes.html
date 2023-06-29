@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dota 2</title>
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="js/heroes.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/dropdows.js"></script>
+</head>
+<body>
+	<div class="mobileHeader">
+		<div class="changeTheme">
+			<span class="icon-IcoMoon"></span>
+		</div>
+		<div class="mobileHeader__container">
+			<a href="/src/index.html" class="mobileHeader__logo">
+				<img src="icons/dota2_logo_red.png" alt="logo">
+			</a>
+			<nav>
+				<ul class="header__menu mobileHeader__menu">
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">игра</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/heroes.html" class="header__menu__btn mobileHeader__menu__btn">герои</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/news.html" class="header__menu__btn mobileHeader__menu__btn">новости</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/cybersport.html" class="header__menu__btn mobileHeader__menu__btn">киберспорт</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="hamburger">
+			<span></span> 
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<section class="promo heroesPage__promo">
+		<div data-speed=".10" class="layer layer__base layer__mainlayer"></div>
+		<div data-speed=".6" class="layer layer__middle"></div>
+		<div data-speed=".9" class="layer layer__front"></div>
+		<div class="promo__container">
+			<header class="header">
+				<div class="header__logo-wrapper">
+					<a href="index.html" class="header__logo">
+						<img src="icons/dota2_logo_red.png" alt="logo">
+					</a>
+					<div class="changeTheme changeThemeLogo">
+						<span class="icon-IcoMoon"></span>
+					</div>
+				</div>
+				
+				<nav>
+					<ul class="header__menu">
+						<li class="header__menu__item">
+							<div class="header__menu__btn header__menu__btn__game">
+								игра
+							</div>
+							<div class="header__menu__dropdown">
+								<a href="/src/pages/news/news-main.html" class="header__menu__dropdown__item">Главная новость</a>
+								<a href="/src/pages/news/news-main.html" class="header__menu__dropdown__item">Последнее изменение баланса</a>
+								<a href="https://steamcommunity.com/market/search?appid=570" class="header__menu__dropdown__item">Торговая площадка</a>
+							</div>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/heroes.html" class="header__menu__btn">герои</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/news.html" class="header__menu__btn">новости</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/cybersport.html" class="header__menu__btn">киберспорт</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+					<span class="icon-steam_logo"></span>
+					<span>играть бесплатно</span> 
+				</a>
+				<div class="changeTheme changeThemeRight">
+					<span class="icon-IcoMoon"></span>
+				</div>
+			</header>
+			<div class="promo__bottom">
+				<div class="promo__bottom__wrap">
+					<h1 class="promo__title">выберите героя</h1>
+					<h2 class="promo__subtitle">Герои Dota 2 - это то, что составляет большую часть игры. 
+						В настоящее время насчитывается более 120 героев и с каждым годом их становится все больше и больше.</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="section__title section__title_heroesPage">
+		<div class="section__title__smokeTop"></div>
+		<div class="section__title__smokeBot"></div>
+	</div>
+	<section class="heroesPage">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav class="heroes__Nav">
+						<div class="heroes__Nav__search">
+							<form action="" method="get">
+								<input name="filterSearch" placeholder="Найти героя..." type="search">
+							</form>
+							<div class="heroes__Nav__search__label"></div>
+						</div>
+						<div class="heroes__Nav__filter">
+							<div class="heroes__Nav__filter__attribute">
+								<div class="heroes__Nav__filter__attribute__text">Атрибут</div>
+								<div class="btn">
+									<div class="btn__item strengthItem"></div>
+								</div>
+								<div class="btn">
+									<div class="btn__item agilityItem"></div>
+								</div>
+								<div class="btn">
+									<div class="btn__item intelligenceItem"></div>
+								</div>
+							</div>
+							<div class="heroes__Nav__filter__complexity">
+								<div class="heroes__Nav__filter__complexity__text">Сложность</div>
+								<div class="btn">
+									<div class="btn__itemLvl lvl-1"></div>
+								</div>
+								<div class="btn">
+									<div class="btn__itemLvl lvl-2"></div>
+								</div>
+								<div class="btn">
+									<div class="btn__itemLvl lvl-3"></div>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1 ">
+					<a href="/src/pages/heroes/abaddon.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">abaddon</div>
+						</div>
+						<div class="hero__img abaddon"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="/src/pages/heroes/alchemist.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">alchemist</div>
+						</div>
+						<div class="hero__img alchemist"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="/src/pages/heroes/ancient_apparition.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">ancient apparition</div>
+						</div>
+						<div class="hero__img AncientApparition"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="/src/pages/heroes/antimage.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">anti-mage</div>
+						</div>
+						<div class="hero__img AntiMage"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-3">
+					<a href="/src/pages/heroes/arcWarden.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">arc warden</div>
+						</div>
+						<div class="hero__img ArkWarden"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="/src/pages/heroes/axe.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">axe</div>
+						</div>
+						<div class="hero__img Axe"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="/src/pages/heroes/bane.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">bane</div>
+						</div>
+						<div class="hero__img Bane"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="/src/pages/heroes/batrider.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">batrider</div>
+						</div>
+						<div class="hero__img Batrider"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="/src/pages/heroes/beastmaster.html" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">beastmaster</div>
+						</div>
+						<div class="hero__img Beastmaster"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">bloodseeker</div>
+						</div>
+						<div class="hero__img Bloodseeker"></div>
+						<div class="hero__fadeContainer"></div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img BountyHunter"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">bounty hunter</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img Brewmaster"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">brewmaster</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img Bristleback"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">bristleback</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img Broodmother"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">broodmother</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img CentaurWarrunner"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">centaur warrunner</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img ChaosKnight"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">chaos knight</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img Chen"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">chen</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img Clinkz"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">clinkz</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img Clockwerk"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">clockwerk</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img crystalmaiden"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">crystal maiden</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img darkseer"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">dark seer</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="/src/pages/heroes/dark_willow.html" class="hero">
+						<div class="hero__img darkwillow"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">dark willow</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img dawnbreaker"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">dawnbreaker</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img dazzle"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">dazzle</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img deathprophet"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">death prophet</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img disruptor"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">disruptor</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img doom"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">doom</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img dragonknight"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">dragon knight</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img drowranger"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">drow ranger</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img earthspirit"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">earth spirit</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img earthshaker"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">earthshaker</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img eldertitan"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">elder titan</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img emberspirit"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">ember spirit</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img enchantress"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">enchantress</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img enigma"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">enigma</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img facelessvoid"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">faceless void</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img grimstroke"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">grimstroke</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="/src/pages/heroes/gyro.html" class="hero">
+						<div class="hero__img gyrocopter"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">gyrocopter</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img hoodwink"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">hoodwink</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img huskar"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">huskar</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-3">
+					<a href="/src/pages/heroes/invoker.html" class="hero">
+						<div class="hero__img invoker"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">invoker</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-3">
+					<a href="/src/pages/heroes/io.html" class="hero">
+						<div class="hero__img io"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">io</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img jakiro"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">jakiro</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img juggernaut"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">juggernaut</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img keeperofthelight"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">keeper of the light</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img kunkka"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">kunkka</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img legioncommander"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">legion commander</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img leshrac"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">leshrac</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img lich"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">lich</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img lifestealer"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">lifestealer</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img lina"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">lina</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img lion"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">lion</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img lonedruid"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">lone druid</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img luna"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">luna</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img lycan"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">lycan</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img magnus"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">magnus</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img marci"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">marci</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img mars"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">mars</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img medusa"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">medusa</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img meepo"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">meepo</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img mirana"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">mirana</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img monkeyking"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">monkey king</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img morfling"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">morfling</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="/src/pages/heroes/muerta.html" class="hero">
+						<div class="hero__img muerta"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">muerta</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img nagasiren"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">naga siren</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img Naturesprophet"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">Nature's prophet</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img necrophos"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">necrophos</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img nightstalker"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">night stalker</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="/src/pages/heroes/nyxAssassin.html" class="hero">
+						<div class="hero__img nyxassassin"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">nyx assassin</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img ogremagi"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">ogre magi</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img omniknight"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">omniknight</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-3">
+					<a href="" class="hero">
+						<div class="hero__img oracle"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">oracle</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img obsidiandestroyer"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">obsidian destroyer</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img pangolier"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">pangolier</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img phantomassassin"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">phantom assassin</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img phantomlancer"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">phantom lancer</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img phoenix"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">phoenix</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img primalbeast"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">primal beast</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img puck"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">puck</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img pudge"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">pudge</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img pugna"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">pugna</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img queenofpain"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">queen of pain</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img razor"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">razor</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img riki"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">riki</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-3">
+					<a href="/src/pages/heroes/rubick.html" class="hero">
+						<div class="hero__img rubick"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">rubick</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img sandking"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">sand king</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img shadowdemon"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">shadow demon</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img shadowfiend"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">shadow fiend</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img shadowshaman"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">shadow shaman</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img silencer"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">silencer</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img Skywrathmage"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">Skywrath mage</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img slardar"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">slardar</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img sralk"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">sralk</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img snapfire"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">snapfire</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img sniper"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">sniper</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img spectre"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">spectre</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img spiritbreaker"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">spirit breaker</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img stormspirit"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">storm spirit</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img sven"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">sven</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="/src/pages/heroes/techies.html" class="hero">
+						<div class="hero__img techies"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">techies</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img templarassassin"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">templar assassin</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img terrorblade"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">terrorblade</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img tidehunter"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">tidehunter</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img timbersaw"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">timbersaw</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img tinker"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">tinker</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img tiny"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">tiny</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img treantprotector"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">treant protector</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img trollwarlord"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">troll warlord</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img tusk"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">tusk</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img underlord"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">underlord</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img undying"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">undying</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img ursa"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">ursa</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img vengefulspirit"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">vengeful spirit</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img venomancer"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">venomancer</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img viper"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">viper</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-3">
+					<a href="/src/pages/heroes/visage.html" class="hero">
+						<div class="hero__img visage"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">visage</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img voidspirit"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">void spirit</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img warlock"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">warlock</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 agility lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img weaver"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">weaver</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img windranger"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">windranger</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-2">
+					<a href="" class="hero">
+						<div class="hero__img winterwyvern"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">winter wyvern</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img witchdoctor"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">witch doctor</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 strength lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img wraithking"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">wraith king</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-6 col-md-3 intelligence lvl-1">
+					<a href="" class="hero">
+						<div class="hero__img zeus"></div>
+						<div class="hero__fadeContainer"></div>
+						<div class="hero__content">
+							<div class="hero__content__attribute"></div>
+							<div class="hero__content__name">zeus</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="section__title">
+			<div class="section__title__smokeTop"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<img class="dotalogo" src="/src/icons/dota2_logo_red.png" alt="">
+				</div>
+				<div class="col-md-8">
+					<div class="footer__descr"> 
+						Dota и логотип Dota являются товарными знаками и/или зарегистрированными товарными знаками Wolf Corporation. 2023
+						Wolf Corporation, все права защищены.
+					</div>
+				</div>
+				<div class="col-md-2">
+					<img class="vaclogo" src="https://pic.rutubelist.ru/video/78/e9/78e9e07a74662f8966f8c70c08ed794b.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

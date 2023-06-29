@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dota 2</title>
+	<link rel="stylesheet" href="/src/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="/src/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/src/css/font.css">
+	<link rel="stylesheet" href="/src/css/style.min.css">
+	<script src="/src/js/heroesPages/batrider.js" defer></script>
+	<script src="/src/js/app.js" defer></script>
+
+</head>
+<body>
+	<div class="mobileHeader">
+		<div class="changeTheme">
+			<span class="icon-IcoMoon"></span>
+		</div>
+		<div class="mobileHeader__container">
+			<a href="/src/index.html" class="mobileHeader__logo">
+				<img src="/src/icons/dota2_logo_red.png" alt="logo">
+			</a>
+			<nav>
+				<ul class="header__menu mobileHeader__menu">
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">игра</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/heroes.html" class="header__menu__btn mobileHeader__menu__btn">герои</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">новости</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">киберспорт</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<section class="promo hero-features__promo">
+		<div data-speed=".9" class="layer layer__base layer__hero"></div>
+		<div class="promo__container">
+			<header class="header">
+				<a href="/src/index.html" class="header__logo">
+					<img src="/src/icons/dota2_logo_red.png" alt="logo">
+				</a>
+				<nav>
+					<ul class="header__menu">
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">игра</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/heroes.html" class="header__menu__btn">герои</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/news.html" class="header__menu__btn">новости</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/cybersport.html" class="header__menu__btn">киберспорт</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+					<span class="icon-steam_logo"></span>
+					<span>играть бесплатно</span> 
+				</a>
+				<div class="changeTheme">
+					<span class="icon-IcoMoon"></span>
+				</div>
+			</header>
+	
+		<div class="hero-features herolist-heroPage">
+			<div class="hero-features__image herolist-heroPage__image__batrider">
+				<div class="hero-features__image__wrapper">
+					<div class="hero-features__name herolist-heroPage__name">Batrider</div>
+					<div class="hero-features__heroType intelligence-main">
+						<div class="heroType-strength"></div>
+						<div class="heroType-agility"></div>
+						<div class="heroType-intelligence"></div>
+					</div>
+				</div>
+				<div class="hero-features__image__descr">
+					Взмыв в небеса, Batrider может нанести удар с любой стороны. Захватив противника своим лассо, он поднимается над верхушками деревьев и тащит жертву по тропе огня прямо к своим беспощадным союзникам.
+				</div>
+				<div class="hero-features__image__fadeContainer"></div>
+			</div>
+			<div class="hero-features__content">
+				<div class="hero-features__content__menu">
+					<div class="hero-features__content__menu__abilities">abilities</div>
+					<div class="hero-features__content__menu__lore">lore</div>
+				</div>
+				<div class="hero-features__content__abilities active">
+					<ul class="skills">
+						<li class="skill" id="skill-1">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_sticky_napalm.png" alt="skill-1" class="skill__icon skill__icon-1">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">STICKY NAPALM</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-2">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_flamebreak.png" alt="skill-2" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">FLAMEBREAK</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-3">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_firefly.png" alt="skill-3" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">FIREFLY</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-4">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_flaming_lasso.png" alt="skill-4" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">FLAMING LASSO</div>
+							</div>
+						</li>
+					</ul>
+					<div class="skill__descr">
+						<div class="skill__descr__characteristic">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/batrider_sticky_napalm.png" alt="skill-descr" class="skill__descr__icon">
+							<div class="skill__descr__wrapper">
+								<div class="skill__descr__wrapper__name">STICKY NAPALM</div>
+								<div class="skill__descr__wrapper__text">
+									Выплёскивает в выбранную область вязкое масло, которое увеличивает урон от всех атак и способностей героя. Масло замедляет передвижение и поворот врагов. Эффект от масла складывается до 10.0 раз. Каждое попадание наносит немного урона.
+								</div>
+							</div>
+						</div>
+						<video class="skill__descr__video" autoplay="" preload="auto" loop="" playsinline="" muted="">
+							<source class="video-source-webm" type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/batrider/batrider_sticky_napalm.webm">
+							<source class="video-source-mp4" type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/batrider/batrider_sticky_napalm.mp4">
+						</video>
+					</div>
+				</div>
+				<div class="hero-features__content__lore">
+					Среди тварей, обитающих в джунглях Йама Раскав, такой вещи, как гармония, попросту нет. Любое проявление слабости приведёт к мгновенной смерти от клювов, когтей, жвал или копыт. Поговаривают, что давным-давно, когда Batrider ещё был простым пареньком, выкапывающим сорняки с семейного поля, его схватила огромная летучая мышь, искавшая себе пищу. Но у парня были другие планы, и, вырвавшись из лап хищника, он вскарабкался на спину зверя и зарубил его своими инструментами. Выбравшись из кровавых ошмётков, пьяный от ощущения полёта, мальчик осознал, что нашёл своё призвание.<br><br>
+
+					Он рос и каждое лето выходил на то же поле, частенько лез в кусты в поиске тех же ощущений, которые он испытывал, стоя на пороге смерти от падения либо острых клыков. Годы шли, но пламя в его душе разгоралось только сильнее. Он исследовал заросли, забираясь все глубже и глубже с каждым своим походом, пока, наконец, не нашёл путь к пещерам — самому сердцу враждебности. Легенда гласит, что той знойной ночью всадник имел с собой только верёвку, бутылку жидкой отваги и собственную решимость, когда, мечтая почувствовать небеса снова, прыгнул внутрь...
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<footer class="footer">
+		<div class="section__title">
+			<div class="section__title__smokeTop"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<img class="dotalogo" src="/src/icons/dota2_logo_red.png" alt="">
+				</div>
+				<div class="col-md-8">
+					<div class="footer__descr"> 
+						Dota и логотип Dota являются товарными знаками и/или зарегистрированными товарными знаками Wolf Corporation. 2023
+						Wolf Corporation, все права защищены.
+					</div>
+				</div>
+				<div class="col-md-2">
+					<img class="vaclogo" src="https://pic.rutubelist.ru/video/78/e9/78e9e07a74662f8966f8c70c08ed794b.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

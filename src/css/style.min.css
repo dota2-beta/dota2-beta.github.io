@@ -1,0 +1,3923 @@
+@charset "UTF-8";
+* {
+  font-family: "Palatino Linotype", sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.7); /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 3px solid rgb(40, 40, 40); /* padding вокруг плашки */
+}
+
+.section__title {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section__title__smokeTop {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate(0, -95%);
+          transform: translate(0, -95%);
+  width: 100%;
+  height: 80px;
+  background: url("/src/img/dire/homePage/smokeTop.png") center center/contain repeat;
+  z-index: 2;
+}
+.section__title__smokeBot {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 95%);
+          transform: translate(0, 95%);
+  width: 100%;
+  height: 80px;
+  background: url("/src/img/dire/homePage/smokeBot.png") center center/contain repeat;
+  z-index: 2;
+}
+.section__title__smokeBot_heroes {
+  height: 22px;
+}
+.section__title .left__horizBar, .section__title .right__horizBar {
+  width: 528px;
+  height: 5px;
+  background-color: #FF0000;
+}
+.section__title .left__horizBar {
+  background: -webkit-gradient(linear, right top, left top, from(#FF0000), to(black));
+  background: linear-gradient(-90deg, #FF0000, black);
+}
+.section__title .right__horizBar {
+  background: -webkit-gradient(linear, left top, right top, from(#FF0000), to(black));
+  background: linear-gradient(90deg, #FF0000, black);
+}
+.section__title .section__name {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 44px;
+  color: #fff;
+  text-align: center;
+}
+.section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+  width: 728px;
+}
+.section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+  width: 728px;
+}
+.section__title_joinBattle .left__horizBar, .section__title_joinBattle .right__horizBar {
+  width: 520px;
+}
+.section__title_joinBattle .left__horizBar {
+  background: -webkit-gradient(linear, right top, left top, from(#FF0000), to(transparent));
+  background: linear-gradient(-90deg, #FF0000, transparent);
+}
+.section__title_joinBattle .right__horizBar {
+  background: -webkit-gradient(linear, left top, right top, from(#FF0000), to(transparent));
+  background: linear-gradient(90deg, #FF0000, transparent);
+}
+.section__title_joinBattle .section__name {
+  text-shadow: 0 0 15px #FF0000;
+}
+
+.mainBtn {
+  width: 370px;
+  height: 78px;
+  display: block;
+  margin: 30px auto 0 auto;
+  background-color: transparent;
+  border-color: #909090;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  color: #fff;
+}
+.mainBtn:hover {
+  border-color: #FF4C24;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  text-decoration: none;
+  color: #fff;
+}
+.mainBtn__joinBattle {
+  display: block;
+  width: 550px;
+  height: 110px;
+  border-color: #A9A9A9;
+  border-width: 7px;
+  padding-top: 13px;
+  font-size: 40px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.mainBtn__joinBattle:hover {
+  border-color: #FF0000;
+  text-shadow: 0 0 12px #FF0000;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  text-decoration: none;
+  color: #fff;
+}
+
+.dotalogo {
+  display: block;
+  margin: 0 auto;
+  max-height: 95px;
+}
+
+.vaclogo {
+  display: block;
+  margin: 0 auto;
+  max-height: 75px;
+}
+
+.promo {
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+.promo__container {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  height: 100vh;
+  overflow: hidden;
+}
+.promo__bottom {
+  min-height: 195px;
+  width: 1650px;
+  position: absolute;
+  bottom: calc(var(--index) * 8.5);
+  left: calc(var(--index) * 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.promo__title {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 52px;
+  color: #fff;
+  text-shadow: 0 0 15px #FF0000;
+  text-transform: uppercase;
+}
+.promo__subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.layer {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+.layer__base {
+  background-image: url("/src/img/dire/homePage/promo_base.jpg");
+}
+.layer__middle {
+  background-image: url("/src/img/dire/homePage/dire_back_middle.png");
+}
+.layer__front {
+  background-image: url("/src/img/dire/homePage/dire_back_front.png");
+  z-index: 2;
+  pointer-events: none;
+}
+.layer__front__logo {
+  z-index: 0;
+}
+
+.horizBar {
+  width: 568px;
+  height: 3px;
+  background-color: rgb(255, 0, 0);
+}
+
+.header {
+  max-width: 1725px;
+  margin: 0 auto;
+  padding: 33px 0 0 33px;
+  display: grid;
+  grid-template-columns: 235px 900px 455px 100px;
+  position: relative;
+}
+.header__logo {
+  margin-top: calc(var(--index) * 1.1);
+  position: relative;
+  width: 175px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__menu {
+  margin-top: calc(var(--index) * 1.2);
+  display: grid;
+  grid-template-columns: 159px 159px 159px 254px;
+  gap: 37px;
+  list-style-type: none;
+}
+.header__menu__btn {
+  display: block;
+  text-align: center;
+  font-size: 28px;
+  width: 175px;
+  height: 46px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+  color: #000;
+}
+.header__menu__btn:hover {
+  background-color: #FF4C24;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  text-decoration: none;
+  color: #000;
+}
+.header__menu__item:nth-child(4) a {
+  width: 215px;
+}
+.header__menu__item:nth-child(1) div:hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+.header__menu__dropdown {
+  background-color: rgba(106, 106, 106, 0.7);
+  border-radius: 3px;
+  border: 3px solid rgb(220, 220, 220); /* padding вокруг плашки */
+  width: 190px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header__menu__dropdown__item {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__menu__dropdown__item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  text-decoration: none;
+  color: #FF4C24;
+}
+.header .changeTheme {
+  width: 50px;
+  height: 50px;
+  margin: calc(var(--index) * 1.2) auto 0 auto;
+  border-radius: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header .changeTheme:hover {
+  background-color: rgb(150, 150, 150);
+}
+.header .changeTheme span {
+  font-size: 50px;
+}
+
+.changeThemeLogo {
+  display: none;
+}
+
+.steam {
+  text-decoration: none; /* no underline */
+}
+
+.steamBtn {
+  width: 428px;
+  height: 88px;
+  margin-top: calc(var(--index));
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  border-color: #fff;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+}
+.steamBtn:hover {
+  border-color: #FF4C24;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+.steamBtn span:nth-child(1) {
+  font-size: 75px;
+}
+.steamBtn__text__add {
+  font-size: 18px;
+}
+
+.mobileHeader {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.cyberContainer {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.cyberContainer__icon {
+  background: url("/src/img/gear.png") center center/cover no-repeat;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+.cyberContainer__text {
+  font-size: 34px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+}
+
+.news {
+  padding-bottom: 36px;
+}
+.news__main {
+  position: relative;
+  overflow: hidden;
+  min-height: 1230px;
+}
+.news__main .layer {
+  will-change: transform;
+}
+.news__main .layer__base {
+  background-image: url("/src/img/dire/homePage/news_back_base.jpg");
+}
+.news__main .layer__middle {
+  background-image: url("/src/img/dire/homePage/news_back_middle.png");
+}
+.news__main .layer__front {
+  background-image: url("/src/img/dire/homePage/news_back_front.png");
+}
+.news__main__update {
+  background-color: grey;
+  height: 500px;
+  margin-bottom: 30px;
+}
+.news__main__update a {
+  text-decoration: none;
+  padding: 15px;
+}
+.news__main__otherUpdates {
+  background-color: grey;
+  height: 378px;
+  margin-bottom: 30px;
+}
+.news__main__otherUpdates a {
+  text-decoration: none;
+}
+.news__main .row {
+  padding-top: 80px;
+}
+
+.blogContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 0 20px 15px;
+  background-color: #333;
+  position: relative;
+  border-bottom: 3px solid #555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-shadow: 0px 0px 10px #000;
+          box-shadow: 0px 0px 10px #000;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+}
+.blogContainer__fadeContainer {
+  width: 100%;
+  height: 160%;
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  bottom: -20%;
+  right: 0px;
+  background-color: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, rgba(19, 23, 28, 0)), color-stop(70%, rgba(19, 23, 28, 0.733)), color-stop(90%, rgb(19, 23, 28)));
+  background: linear-gradient(rgba(19, 23, 28, 0) 60%, rgba(19, 23, 28, 0.733) 70%, rgb(19, 23, 28) 90%);
+  -webkit-transition: 1.6s;
+  transition: 1.6s;
+}
+.blogContainer__mainText {
+  -webkit-transition: max-height 1.2s, opacity 0.5s;
+  transition: max-height 1.2s, opacity 0.5s;
+  max-height: 0;
+  font-weight: 500;
+  font-size: 24px;
+  opacity: 0;
+  z-index: 1;
+  color: #BDBDBD;
+  pointer-events: none;
+  will-change: max-height;
+}
+.blogContainer__mainText_otherUp {
+  font-size: 20px;
+}
+.blogContainer__title {
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  z-index: 1;
+}
+.blogContainer__Date {
+  font-size: 20px;
+  color: grey;
+  z-index: 1;
+}
+.blogContainer:hover {
+  border-bottom-color: #FF0000;
+}
+.blogContainer:hover .blogContainer__fadeContainer {
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.blogContainer:hover .blogContainer__mainText {
+  max-height: 100%;
+  opacity: 100%;
+}
+
+.heroes {
+  min-height: 1150px;
+}
+.heroes__wrapper {
+  position: relative;
+  min-height: 1080px;
+  background: url("/src/img/heroes/BEZIMENI.png") center center/cover no-repeat;
+}
+.heroes__wrapper__content {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 7%;
+}
+.heroes__wrapper__content__subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.heroes__wrapper__content__title {
+  font-weight: 700;
+  font-size: 52px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.heroes__wrapper__content__descr {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+.heroes__wrapper {
+  padding: 11px 0 0 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.heroesList {
+  display: grid;
+  -webkit-column-gap: 3px;
+     -moz-column-gap: 3px;
+          column-gap: 3px;
+  grid-template-columns: repeat(17, 109px);
+  grid-template-rows: repeat(5, 58px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 11px;
+  width: 100%;
+  height: 100%;
+}
+.heroesList__item {
+  width: 103px;
+  height: 60px;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.heroesList__item__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.heroesList__item__name {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  bottom: -90%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  text-shadow: 2px 2px 2px #000;
+}
+.heroesList__item:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.heroesList__item:hover .heroesList__item__name {
+  bottom: 5%;
+}
+
+#heroesList__item__image-1 {
+  background: url("/src/img/heroes/morfling.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-2 {
+  background: url("/src/img/heroes/ancient_apparition.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-3 {
+  background: url("/src/img/heroes/puck.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-4 {
+  background: url("/src/img/heroes/enigma.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-5 {
+  background: url("/src/img/heroes/slark.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-6 {
+  background: url("/src/img/heroes/templar_assassin.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-7 {
+  background: url("/src/img/heroes/witch_doctor.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-8 {
+  background: url("/src/img/heroes/antimage.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-9 {
+  background: url("/src/img/heroes/lion.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-10 {
+  background: url("/src/img/heroes/queen_of_pain.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-11 {
+  background: url("/src/img/heroes/troll_warlord.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-12 {
+  background: url("/src/img/heroes/centaur_warrunner.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-13 {
+  background: url("/src/img/heroes/silenser.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-14 {
+  background: url("/src/img/heroes/huskar.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-15 {
+  background: url("/src/img/heroes/omniknight.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-16 {
+  background: url("/src/img/heroes/sven.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-17 {
+  background: url("/src/img/heroes/death_prophet.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-18 {
+  background: url("/src/img/heroes/phantom_assassin.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-19 {
+  background: url("/src/img/heroes/razor.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-20 {
+  background: url("/src/img/heroes/leshrac.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-21 {
+  background: url("/src/img/heroes/tusk.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-22 {
+  background: url("/src/img/heroes/ogre_magi.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-23 {
+  background: url("/src/img/heroes/meepo.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-24 {
+  background: url("/src/img/heroes/slardar.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-25 {
+  background: url("/src/img/heroes/jakiro.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-26 {
+  background: url("/src/img/heroes/ursa.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-27 {
+  background: url("/src/img/heroes/shadow_fiend.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-28 {
+  background: url("/src/img/heroes/doom.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-29 {
+  background: url("/src/img/heroes/warlock.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-30 {
+  background: url("/src/img/heroes/wraith_king.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-31 {
+  background: url("/src/img/heroes/bounty_hunter.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-32 {
+  background: url("/src/img/heroes/chen.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-33 {
+  background: url("/src/img/heroes/tiny.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-34 {
+  background: url("/src/img/heroes/undying.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-35 {
+  background: url("/src/img/heroes/storm_spirit.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-36 {
+  background: url("/src/img/heroes/drow_ranger.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-37 {
+  background: url("/src/img/heroes/crystal_maiden.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-38 {
+  background: url("/src/img/heroes/kunkka.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-39 {
+  background: url("/src/img/heroes/mirana.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-40 {
+  background: url("/src/img/heroes/spectre.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-41 {
+  background: url("/src/img/heroes/sniper.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-42 {
+  background: url("/src/img/heroes/magnus.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-43 {
+  background: url("/src/img/heroes/axe.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-44 {
+  background: url("/src/img/heroes/lina.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-45 {
+  background: url("/src/img/heroes/clinkz.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-46 {
+  background: url("/src/img/heroes/bloodseeker.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-47 {
+  background: url("/src/img/heroes/lycan.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-48 {
+  background: url("/src/img/heroes/pudge.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-49 {
+  background: url("/src/img/heroes/tidehunter.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-50 {
+  background: url("/src/img/heroes/viper.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-51 {
+  background: url("/src/img/heroes/weaver.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-52 {
+  background: url("/src/img/heroes/riki.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-53 {
+  background: url("/src/img/heroes/night_stalker.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-54 {
+  background: url("/src/img/heroes/lich.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-55 {
+  background: url("/src/img/heroes/luna.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-56 {
+  background: url("/src/img/heroes/tinker.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-57 {
+  background: url("/src/img/heroes/broodmother.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-58 {
+  background: url("/src/img/heroes/clockwerk.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-59 {
+  background: url("/src/img/heroes/Skywrath_Mage.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-60 {
+  background: url("/src/img/heroes/brewmaster.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-61 {
+  background: url("/src/img/heroes/phantom_lancer.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-62 {
+  background: url("/src/img/heroes/chaos_knight.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-63 {
+  background: url("/src/img/heroes/shadow_shaman.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-64 {
+  background: url("/src/img/heroes/earthshaker.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-65 {
+  background: url("/src/img/heroes/keeper_of_the_light.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-66 {
+  background: url("/src/img/heroes/treant_protector.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-67 {
+  background: url("/src/img/heroes/pugna.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-68 {
+  background: url("/src/img/heroes/necrophos.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-69 {
+  background: url("/src/img/heroes/abaddon.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-70 {
+  background: url("/src/img/heroes/spirit_breaker.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-71 {
+  background: url("/src/img/heroes/vengeful_spirit.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-72 {
+  background: url("/src/img/heroes/zeus.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-73 {
+  background: url("/src/img/heroes/disruptor.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-74 {
+  background: url("/src/img/heroes/dark_seer.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-75 {
+  background: url("/src/img/heroes/faceless_void.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-76 {
+  background: url("/src/img/heroes/invoker.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-77 {
+  background: url("/src/img/heroes/dazzle.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-78 {
+  background: url("/src/img/heroes/juggernaut.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-79 {
+  background: url("/src/img/heroes/bristleback.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-80 {
+  background: url("/src/img/heroes/elder_titan.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-81 {
+  background: url("/src/img/heroes/sand_king.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-82 {
+  background: url("/src/img/heroes/windranger.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-83 {
+  background: url("/src/img/heroes/Natures_Prophet.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-84 {
+  background: url("/src/img/heroes/venomancer.png") center center/cover no-repeat;
+}
+
+#heroesList__item__image-85 {
+  background: url("/src/img/heroes/medusa.png") center center/cover no-repeat;
+}
+
+.heroesListAdd {
+  margin-top: 10px;
+  display: grid;
+  -webkit-column-gap: 4px;
+     -moz-column-gap: 4px;
+          column-gap: 4px;
+  grid-template-columns: repeat(17, 109px);
+  grid-template-rows: 305px 2px 17px 20px 30px 37px 49px 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  row-gap: 5px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.heroesListAdd__item {
+  position: relative;
+  width: 103px;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.heroesListAdd__item__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.heroesListAdd__item__name {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-shadow: 2px 2px 2px #000;
+}
+.heroesListAdd__item:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 9;
+}
+.heroesListAdd__item:nth-child(2) {
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+.heroesListAdd__item:nth-child(3) {
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+.heroesListAdd__item:nth-child(4) {
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.heroesListAdd__item:nth-child(5) {
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+.heroesListAdd__item:nth-child(6) {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.heroesListAdd__item:nth-child(7) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.heroesListAdd__item:nth-child(8) {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.heroesListAdd__item:nth-child(9) {
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+.heroesListAdd__item:nth-child(10) {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.heroesListAdd__item:nth-child(11) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.heroesListAdd__item:nth-child(12) {
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.heroesListAdd__item:nth-child(13) {
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+.heroesListAdd__item:nth-child(14) {
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.heroesListAdd__item:nth-child(15) {
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+.heroesListAdd__item:nth-child(16) {
+  grid-row-start: 1;
+  grid-row-end: 8;
+}
+.heroesListAdd__item:nth-child(17) {
+  grid-row-start: 1;
+  grid-row-end: 9;
+}
+.heroesListAdd__item:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.heroesListAdd__item:hover .heroesListAdd__item__name {
+  bottom: 5%;
+}
+
+#heroesListAdd__item__image-1 {
+  background: url("/src/img/heroes/visage.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-2 {
+  background: url("/src/img/heroes/gyrocopter.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-3 {
+  background: url("/src/img/heroes/io.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-4 {
+  background: url("/src/img/heroes/beastmaster.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-5 {
+  background: url("/src/img/heroes/nyx.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-6 {
+  background: url("/src/img/heroes/bane.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-7 {
+  background: url("/src/img/heroes/rubick.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-8 {
+  background: url("/src/img/heroes/alchemist.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-9 {
+  background: url("/src/img/heroes/techies.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-10 {
+  background: url("/src/img/heroes/naga_siren.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-11 {
+  background: url("/src/img/heroes/shadow_demon.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-12 {
+  background: url("/src/img/heroes/timbersaw.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-13 {
+  background: url("/src/img/heroes/dragon_knight.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-14 {
+  background: url("/src/img/heroes/batrider.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-15 {
+  background: url("/src/img/heroes/lone_druid.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-16 {
+  background: url("/src/img/heroes/enchantress.png") center center/cover no-repeat;
+}
+
+#heroesListAdd__item__image-17 {
+  background: url("/src/img/heroes/obsidian_destroyer.png") center center/cover no-repeat;
+}
+
+.cybersport {
+  min-height: 1200px;
+}
+.cybersport__wrapper {
+  position: relative;
+  min-height: 1080px;
+  background: url("/src/img/dire/homePage/the_international.jpg") center center/cover no-repeat;
+}
+.cybersport__wrapper__content {
+  max-width: 1300px;
+  height: 500px;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.cybersport__wrapper__content__title {
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+.cybersport__wrapper__content__descr {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  color: white;
+}
+
+.joinBattle__container {
+  min-height: 800px;
+  padding: 70px 0 0 0;
+  overflow: hidden;
+  background: url("/src/img/dire/homePage/joinBattle_back.jpg") center center/cover no-repeat;
+}
+
+.footer {
+  padding: 35px 0 35px 0;
+}
+.footer__descr {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  color: #fff;
+}
+
+.heroesPage {
+  padding: 45px 0 65px 0;
+  background-image: url("/src/img/heroes/heroes_back.jpg");
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.heroesPage__promo .promo__bottom {
+  max-width: 1500px;
+  bottom: 30%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.heroesPage__wrapper {
+  min-height: 1080px;
+  padding: 50px 0;
+}
+.heroesPage__wrapper__content__subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+.heroesPage__wrapper__content__title {
+  font-weight: 700;
+  font-size: 52px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+.heroesPage__wrapper__content__descr {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-weight: 700;
+  font-size: 28px;
+  text-align: center;
+  color: #fff;
+}
+.heroesPage__wrapper__menu {
+  display: block;
+  margin: 50px auto;
+}
+
+.strength {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.agility {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.intelligence {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hiddenHero {
+  opacity: 0;
+  max-width: 0;
+  padding: 0;
+}
+
+.hiddenDifficult {
+  opacity: 0;
+  max-width: 0;
+  padding: 0;
+}
+
+.heroes__Nav {
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+.heroes__Nav__search {
+  font-size: 26px;
+  font-weight: 500;
+  color: #fff;
+}
+.heroes__Nav__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.heroes__Nav__filter__attribute {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.heroes__Nav__filter__attribute__text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+  margin-right: 10px;
+}
+.heroes__Nav__filter__complexity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 8vh;
+}
+.heroes__Nav__filter__complexity__text {
+  font-size: 24px;
+  font-weight: 500;
+  color: #fff;
+}
+.heroes__Nav__filter__complexity button {
+  margin-left: 15px;
+  width: 27px;
+  height: 27px;
+}
+.heroes__Nav__filter .btn {
+  position: relative;
+  margin-left: 5px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  overflow: hidden;
+  background-color: rgb(40, 40, 40);
+}
+.heroes__Nav__filter .btn::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60%;
+  padding-top: 55%;
+  background-color: rgb(253, 253, 253);
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  -webkit-transform: translate(50%, -50%) rotate(45deg);
+          transform: translate(50%, -50%) rotate(45deg);
+}
+.heroes__Nav__filter .btn::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: -5px;
+  width: 135%;
+  padding-top: 30%;
+  background-color: rgb(253, 253, 253);
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  -webkit-transform: translate(-50%, -50%) rotate(225deg);
+          transform: translate(-50%, -50%) rotate(225deg);
+}
+.heroes__Nav__filter .btn__item, .heroes__Nav__filter .btn__itemLvl {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.heroes__Nav__filter .btn__item__active, .heroes__Nav__filter .btn__itemLvl__active {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.heroes__Nav__filter .btn__item__active .btn::after, .heroes__Nav__filter .btn__itemLvl__active .btn::after {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.heroes__Nav__filter .btn__item__active .btn::before, .heroes__Nav__filter .btn__itemLvl__active .btn::before {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.heroes__Nav__filter .btn:hover .btn__item {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+.heroes__Nav__filter .btn .strengthItem {
+  background: url("/src/img/heroes/attributes/hero_strength.png") center center/cover no-repeat;
+}
+.heroes__Nav__filter .btn .agilityItem {
+  background: url("/src/img/heroes/attributes/hero_agility.png") center center/cover no-repeat;
+}
+.heroes__Nav__filter .btn .intelligenceItem {
+  background: url("/src/img/heroes/attributes/hero_intelligence.png") center center/cover no-repeat;
+}
+.heroes__Nav__filter .btn .btn__itemLvl {
+  background: url("/src/img/heroes/attributes/level_min2.png") center center/cover no-repeat;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+form input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input {
+  width: 100%;
+  height: 42px;
+  padding-left: 10px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.hero {
+  display: block;
+  margin-top: 30px;
+  position: relative;
+  height: 100px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+.hero__fadeContainer {
+  width: 100%;
+  height: 160%;
+  position: absolute;
+  pointer-events: none;
+  left: 0px;
+  bottom: -20%;
+  right: 0px;
+  background-color: black;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(75%, rgba(19, 23, 28, 0)), color-stop(90%, rgba(19, 23, 28, 0.733)), color-stop(95%, rgb(19, 23, 28)));
+  background: linear-gradient(rgba(19, 23, 28, 0) 75%, rgba(19, 23, 28, 0.733) 90%, rgb(19, 23, 28) 95%);
+  -webkit-transition: 0.9s;
+  transition: 0.9s;
+  z-index: 1;
+}
+.hero__img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero__content {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  bottom: -60%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.hero:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  z-index: 4;
+}
+.hero:hover .hero__fadeContainer {
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.hero:hover .hero__img::after {
+  right: -10%;
+  top: -10%;
+}
+.hero:hover .hero__content {
+  bottom: 2%;
+}
+
+.abaddon {
+  background: url("/src/img/heroes_icon/abaddon.png") center center/cover no-repeat;
+}
+
+.alchemist {
+  background: url("/src/img/heroes_icon/alchemist.png") center center/cover no-repeat;
+}
+
+.AncientApparition {
+  background: url("/src/img/heroes_icon/ancient_apparition.png") center center/cover no-repeat;
+}
+
+.AntiMage {
+  background: url("/src/img/heroes_icon/antimage.png") center center/cover no-repeat;
+}
+
+.ArkWarden {
+  background: url("/src/img/heroes_icon/arc_warden.png") center center/cover no-repeat;
+}
+
+.Axe {
+  background: url("/src/img/heroes_icon/axe.png") center center/cover no-repeat;
+}
+
+.Bane {
+  background: url("/src/img/heroes_icon/bane.png") center center/cover no-repeat;
+}
+
+.Batrider {
+  background: url("/src/img/heroes_icon/batrider.png") center center/cover no-repeat;
+}
+
+.Beastmaster {
+  background: url("/src/img/heroes_icon/beastmaster.png") center center/cover no-repeat;
+}
+
+.Bloodseeker {
+  background: url("/src/img/heroes_icon/bloodseeker.png") center center/cover no-repeat;
+}
+
+.BountyHunter {
+  background: url("/src/img/heroes_icon/bounty_hunter.png") center center/cover no-repeat;
+}
+
+.Brewmaster {
+  background: url("/src/img/heroes_icon/brewmaster.png") center center/cover no-repeat;
+}
+
+.Bristleback {
+  background: url("/src/img/heroes_icon/bristleback.png") center center/cover no-repeat;
+}
+
+.Broodmother {
+  background: url("/src/img/heroes_icon/broodmother.png") center center/cover no-repeat;
+}
+
+.CentaurWarrunner {
+  background: url("/src/img/heroes_icon/centaur.png") center center/cover no-repeat;
+}
+
+.ChaosKnight {
+  background: url("/src/img/heroes_icon/chaos_knight.png") center center/cover no-repeat;
+}
+
+.Chen {
+  background: url("/src/img/heroes_icon/chen.png") center center/cover no-repeat;
+}
+
+.Clinkz {
+  background: url("/src/img/heroes_icon/clinkz.png") center center/cover no-repeat;
+}
+
+.Clockwerk {
+  background: url("/src/img/heroes_icon/clockwerk.png") center center/cover no-repeat;
+}
+
+.crystalmaiden {
+  background: url("/src/img/heroes_icon/crystal_maiden.png") center center/cover no-repeat;
+}
+
+.darkseer {
+  background: url("/src/img/heroes_icon/dark_seer.png") center center/cover no-repeat;
+}
+
+.darkwillow {
+  background: url("/src/img/heroes_icon/dark_willow.png") center center/cover no-repeat;
+}
+
+.dawnbreaker {
+  background: url("/src/img/heroes_icon/dawnbreaker.png") center center/cover no-repeat;
+}
+
+.dazzle {
+  background: url("/src/img/heroes_icon/dazzle.png") center center/cover no-repeat;
+}
+
+.deathprophet {
+  background: url("/src/img/heroes_icon/death_prophet.png") center center/cover no-repeat;
+}
+
+.disruptor {
+  background: url("/src/img/heroes_icon/disruptor.png") center center/cover no-repeat;
+}
+
+.doom {
+  background: url("/src/img/heroes_icon/doom.png") center center/cover no-repeat;
+}
+
+.dragonknight {
+  background: url("/src/img/heroes_icon/dragon_knight.png") center center/cover no-repeat;
+}
+
+.drowranger {
+  background: url("/src/img/heroes_icon/drow_ranger.png") center center/cover no-repeat;
+}
+
+.earthspirit {
+  background: url("/src/img/heroes_icon/earth_spirit.png") center center/cover no-repeat;
+}
+
+.earthshaker {
+  background: url("/src/img/heroes_icon/earthshaker.png") center center/cover no-repeat;
+}
+
+.eldertitan {
+  background: url("/src/img/heroes_icon/elder_titan.png") center center/cover no-repeat;
+}
+
+.emberspirit {
+  background: url("/src/img/heroes_icon/ember_spirit.png") center center/cover no-repeat;
+}
+
+.enchantress {
+  background: url("/src/img/heroes_icon/enchantress.png") center center/cover no-repeat;
+}
+
+.enigma {
+  background: url("/src/img/heroes_icon/enigma.png") center center/cover no-repeat;
+}
+
+.facelessvoid {
+  background: url("/src/img/heroes_icon/faceless_void.png") center center/cover no-repeat;
+}
+
+.grimstroke {
+  background: url("/src/img/heroes_icon/grimstroke.png") center center/cover no-repeat;
+}
+
+.gyrocopter {
+  background: url("/src/img/heroes_icon/gyrocopter.png") center center/cover no-repeat;
+}
+
+.hoodwink {
+  background: url("/src/img/heroes_icon/hoodwink.png") center center/cover no-repeat;
+}
+
+.huskar {
+  background: url("/src/img/heroes_icon/huskar.png") center center/cover no-repeat;
+}
+
+.invoker {
+  background: url("/src/img/heroes_icon/invoker.png") center center/cover no-repeat;
+}
+
+.io {
+  background: url("/src/img/heroes_icon/wisp.png") center center/cover no-repeat;
+}
+
+.jakiro {
+  background: url("/src/img/heroes_icon/jakiro.png") center center/cover no-repeat;
+}
+
+.juggernaut {
+  background: url("/src/img/heroes_icon/juggernaut.png") center center/cover no-repeat;
+}
+
+.keeperofthelight {
+  background: url("/src/img/heroes_icon/keeper_of_the_light.png") center center/cover no-repeat;
+}
+
+.kunkka {
+  background: url("/src/img/heroes_icon/kunkka.png") center center/cover no-repeat;
+}
+
+.legioncommander {
+  background: url("/src/img/heroes_icon/legion_commander.png") center center/cover no-repeat;
+}
+
+.leshrac {
+  background: url("/src/img/heroes_icon/leshrac.png") center center/cover no-repeat;
+}
+
+.lich {
+  background: url("/src/img/heroes_icon/lich.png") center center/cover no-repeat;
+}
+
+.lifestealer {
+  background: url("/src/img/heroes_icon/life_stealer.png") center center/cover no-repeat;
+}
+
+.lina {
+  background: url("/src/img/heroes_icon/lina.png") center center/cover no-repeat;
+}
+
+.lion {
+  background: url("/src/img/heroes_icon/lion.png") center center/cover no-repeat;
+}
+
+.lonedruid {
+  background: url("/src/img/heroes_icon/lone_druid.png") center center/cover no-repeat;
+}
+
+.luna {
+  background: url("/src/img/heroes_icon/luna.png") center center/cover no-repeat;
+}
+
+.lycan {
+  background: url("/src/img/heroes_icon/lycan.png") center center/cover no-repeat;
+}
+
+.magnus {
+  background: url("/src/img/heroes_icon/magnus.png") center center/cover no-repeat;
+}
+
+.marci {
+  background: url("/src/img/heroes_icon/marci.png") center center/cover no-repeat;
+}
+
+.mars {
+  background: url("/src/img/heroes_icon/mars.png") center center/cover no-repeat;
+}
+
+.medusa {
+  background: url("/src/img/heroes_icon/medusa.png") center center/cover no-repeat;
+}
+
+.meepo {
+  background: url("/src/img/heroes_icon/meepo.png") center center/cover no-repeat;
+}
+
+.mirana {
+  background: url("/src/img/heroes_icon/mirana.png") center center/cover no-repeat;
+}
+
+.monkeyking {
+  background: url("/src/img/heroes_icon/monkey_king.png") center center/cover no-repeat;
+}
+
+.morfling {
+  background: url("/src/img/heroes_icon/morphling.png") center center/cover no-repeat;
+}
+
+.muerta {
+  background: url("/src/img/heroes_icon/muerta.png") center center/cover no-repeat;
+}
+
+.nagasiren {
+  background: url("/src/img/heroes_icon/naga_siren.png") center center/cover no-repeat;
+}
+
+.Naturesprophet {
+  background: url("/src/img/heroes_icon/furion.png") center center/cover no-repeat;
+}
+
+.necrophos {
+  background: url("/src/img/heroes_icon/necrophos.png") center center/cover no-repeat;
+}
+
+.nightstalker {
+  background: url("/src/img/heroes_icon/night_stalker.png") center center/cover no-repeat;
+}
+
+.nyxassassin {
+  background: url("/src/img/heroes_icon/nyx_assassin.png") center center/cover no-repeat;
+}
+
+.ogremagi {
+  background: url("/src/img/heroes_icon/ogre_magi.png") center center/cover no-repeat;
+}
+
+.omniknight {
+  background: url("/src/img/heroes_icon/omniknight.png") center center/cover no-repeat;
+}
+
+.oracle {
+  background: url("/src/img/heroes_icon/oracle.png") center center/cover no-repeat;
+}
+
+.obsidiandestroyer {
+  background: url("/src/img/heroes_icon/obsidian_destroyer.png") center center/cover no-repeat;
+}
+
+.pangolier {
+  background: url("/src/img/heroes_icon/pangolier.png") center center/cover no-repeat;
+}
+
+.phantomassassin {
+  background: url("/src/img/heroes_icon/phantom_assassin.png") center center/cover no-repeat;
+}
+
+.phantomlancer {
+  background: url("/src/img/heroes_icon/phantom_lancer.png") center center/cover no-repeat;
+}
+
+.phoenix {
+  background: url("/src/img/heroes_icon/phoenix.png") center center/cover no-repeat;
+}
+
+.primalbeast {
+  background: url("/src/img/heroes_icon/primal_beast.png") center center/cover no-repeat;
+}
+
+.puck {
+  background: url("/src/img/heroes_icon/puck.png") center center/cover no-repeat;
+}
+
+.pudge {
+  background: url("/src/img/heroes_icon/pudge.png") center center/cover no-repeat;
+}
+
+.pugna {
+  background: url("/src/img/heroes_icon/pugna.png") center center/cover no-repeat;
+}
+
+.queenofpain {
+  background: url("/src/img/heroes_icon/queenofpain.png") center center/cover no-repeat;
+}
+
+.razor {
+  background: url("/src/img/heroes_icon/razor.png") center center/cover no-repeat;
+}
+
+.riki {
+  background: url("/src/img/heroes_icon/riki.png") center center/cover no-repeat;
+}
+
+.rubick {
+  background: url("/src/img/heroes_icon/rubick.png") center center/cover no-repeat;
+}
+
+.sandking {
+  background: url("/src/img/heroes_icon/sand_king.png") center center/cover no-repeat;
+}
+
+.shadowdemon {
+  background: url("/src/img/heroes_icon/shadow_demon.png") center center/cover no-repeat;
+}
+
+.shadowfiend {
+  background: url("/src/img/heroes_icon/nevermore.png") center center/cover no-repeat;
+}
+
+.shadowshaman {
+  background: url("/src/img/heroes_icon/shadow_shaman.png") center center/cover no-repeat;
+}
+
+.silencer {
+  background: url("/src/img/heroes_icon/silencer.png") center center/cover no-repeat;
+}
+
+.Skywrathmage {
+  background: url("/src/img/heroes_icon/skywrath_mage.png") center center/cover no-repeat;
+}
+
+.slardar {
+  background: url("/src/img/heroes_icon/slardar.png") center center/cover no-repeat;
+}
+
+.sralk {
+  background: url("/src/img/heroes_icon/slark.png") center center/cover no-repeat;
+}
+
+.snapfire {
+  background: url("/src/img/heroes_icon/snapfire.png") center center/cover no-repeat;
+}
+
+.sniper {
+  background: url("/src/img/heroes_icon/sniper.png") center center/cover no-repeat;
+}
+
+.spectre {
+  background: url("/src/img/heroes_icon/spectre.png") center center/cover no-repeat;
+}
+
+.spiritbreaker {
+  background: url("/src/img/heroes_icon/spirit_breaker.png") center center/cover no-repeat;
+}
+
+.stormspirit {
+  background: url("/src/img/heroes_icon/storm_spirit.png") center center/cover no-repeat;
+}
+
+.sven {
+  background: url("/src/img/heroes_icon/sven.png") center center/cover no-repeat;
+}
+
+.techies {
+  background: url("/src/img/heroes_icon/techies.png") center center/cover no-repeat;
+}
+
+.templarassassin {
+  background: url("/src/img/heroes_icon/templar_assassin.png") center center/cover no-repeat;
+}
+
+.terrorblade {
+  background: url("/src/img/heroes_icon/terrorblade.png") center center/cover no-repeat;
+}
+
+.tidehunter {
+  background: url("/src/img/heroes_icon/tidehunter.png") center center/cover no-repeat;
+}
+
+.timbersaw {
+  background: url("/src/img/heroes_icon/shredder.png") center center/cover no-repeat;
+}
+
+.tinker {
+  background: url("/src/img/heroes_icon/tinker.png") center center/cover no-repeat;
+}
+
+.tiny {
+  background: url("/src/img/heroes_icon/tiny.png") center center/cover no-repeat;
+}
+
+.treantprotector {
+  background: url("/src/img/heroes_icon/treant.png") center center/cover no-repeat;
+}
+
+.trollwarlord {
+  background: url("/src/img/heroes_icon/troll_warlord.png") center center/cover no-repeat;
+}
+
+.tusk {
+  background: url("/src/img/heroes_icon/tusk.png") center center/cover no-repeat;
+}
+
+.underlord {
+  background: url("/src/img/heroes_icon/abyssal_underlord.png") center center/cover no-repeat;
+}
+
+.undying {
+  background: url("/src/img/heroes_icon/undying.png") center center/cover no-repeat;
+}
+
+.ursa {
+  background: url("/src/img/heroes_icon/ursa.png") center center/cover no-repeat;
+}
+
+.vengefulspirit {
+  background: url("/src/img/heroes_icon/vengefulspirit.png") center center/cover no-repeat;
+}
+
+.venomancer {
+  background: url("/src/img/heroes_icon/venomancer.png") center center/cover no-repeat;
+}
+
+.viper {
+  background: url("/src/img/heroes_icon/viper.png") center center/cover no-repeat;
+}
+
+.visage {
+  background: url("/src/img/heroes_icon/visage.png") center center/cover no-repeat;
+}
+
+.voidspirit {
+  background: url("/src/img/heroes_icon/void_spirit.png") center center/cover no-repeat;
+}
+
+.warlock {
+  background: url("/src/img/heroes_icon/warlock.png") center center/cover no-repeat;
+}
+
+.weaver {
+  background: url("/src/img/heroes_icon/weaver.png") center center/cover no-repeat;
+}
+
+.windranger {
+  background: url("/src/img/heroes_icon/windranger.png") center center/cover no-repeat;
+}
+
+.winterwyvern {
+  background: url("/src/img/heroes_icon/winter_wyvern.png") center center/cover no-repeat;
+}
+
+.witchdoctor {
+  background: url("/src/img/heroes_icon/witch_doctor.png") center center/cover no-repeat;
+}
+
+.wraithking {
+  background: url("/src/img/heroes_icon/skeleton_king.png") center center/cover no-repeat;
+}
+
+.zeus {
+  background: url("/src/img/heroes_icon/zeus.png") center center/cover no-repeat;
+}
+
+#heroes-carousel {
+  margin-top: 150px;
+}
+
+.carousel-hero {
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+  background: url("/src/img/heroesList/greyfade.png") center center/cover no-repeat;
+  position: relative;
+}
+.carousel-hero__image {
+  background: url("/src/img/heroesList/heroes/abaddon/abaddon.jpg") center center/cover no-repeat;
+  height: 75%;
+  width: 25%;
+  position: relative;
+  margin-left: 7%;
+  margin-top: 8%;
+  display: inline-block;
+}
+.carousel-hero__name {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 44px;
+  color: rgb(248, 248, 248);
+  text-transform: uppercase;
+}
+.carousel-hero__content {
+  height: 100%;
+  width: 58%;
+  padding: 25px 10px 15px 25px;
+  margin-left: 15px;
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+}
+.carousel-hero__content__menu {
+  width: 40%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carousel-hero__content__menu__abilities {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+.carousel-hero__content__menu__lore {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+}
+.carousel-hero__content__lore {
+  display: none;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 7%;
+}
+.carousel-hero__content__abilities {
+  display: none;
+}
+.carousel-hero__content .active {
+  display: block;
+}
+.carousel-hero__content .skills {
+  width: 100%;
+  list-style-type: none;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.carousel-hero__content .skills .skill {
+  width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.carousel-hero__content .skills .skill__icon {
+  width: 30%;
+  -webkit-transform: translateX(25%);
+          transform: translateX(25%);
+}
+.carousel-hero__content .skills .skill__wrapper {
+  margin-left: 20px;
+  width: 100%;
+}
+.carousel-hero__content .skills .skill__wrapper__name {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+.carousel-hero__content .skill__descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carousel-hero__content .skill__descr__characteristic {
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carousel-hero__content .skill__descr__icon {
+  width: 20%;
+}
+.carousel-hero__content .skill__descr__wrapper {
+  margin-left: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.carousel-hero__content .skill__descr__wrapper__name {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+.carousel-hero__content .skill__descr__wrapper__text {
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.carousel-hero__content .skill__descr__video {
+  margin-top: 6%;
+  width: 90%;
+}
+
+.layer__hero {
+  background-image: url("/src/img/heroesList/greyfade.png");
+}
+
+.hero-features {
+  width: 100%;
+  min-height: 115vh;
+  margin: 2% auto 8px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.hero-features__promo .promo__container {
+  height: auto;
+}
+.hero-features__promo .promo__container .header {
+  z-index: 3;
+}
+.hero-features__promo .section__title {
+  position: absolute;
+  width: 100%;
+  background-color: #000;
+  z-index: 2;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-90%, #FF0000), color-stop(100%, rgb(0, 0, 0)), to(rgb(33, 37, 41)));
+  background: linear-gradient(#FF0000 -90%, rgb(0, 0, 0) 100%, rgb(33, 37, 41) 100%);
+}
+.hero-features__promo-title {
+  text-align: center;
+}
+.hero-features__promo-subtitle {
+  font-size: 24px;
+  text-align: center;
+  width: 75%;
+  margin: 2% auto 0 auto;
+}
+.hero-features__image {
+  height: 800px;
+  width: 25%;
+  position: relative;
+  margin-left: 7%;
+  margin-top: 8%;
+  display: inline-block;
+  min-width: 260px;
+  max-height: 800px;
+  z-index: 2;
+}
+.hero-features__image:hover .hero-features__image__descr {
+  opacity: 1;
+}
+.hero-features__image:hover .hero-features__image__fadeContainer {
+  opacity: 1;
+}
+.hero-features__image__wrapper {
+  height: 17%;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.hero-features__image__descr {
+  position: absolute;
+  top: 17%;
+  left: 0;
+  color: #fff;
+  font-size: 26px;
+  text-align: center;
+  overflow: scroll;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  z-index: 4;
+  overflow: scroll;
+  max-height: 50%;
+}
+.hero-features__image__descr::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.hero-features__image__descr::-webkit-scrollbar:vertical {
+  width: 4px;
+}
+.hero-features__image__descr::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+.hero-features__image__descr::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 0px solid #fff; /* padding вокруг плашки */
+}
+.hero-features__image__descr::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+.hero-features__image__fadeContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  z-index: 3;
+}
+.hero-features__heroType {
+  height: 100%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-features__heroType .heroType-strength {
+  height: 50px;
+  width: 50px;
+  background: url("/src/icons/hero_strength.png") center center/cover no-repeat;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-filter: saturate(1.3);
+          filter: saturate(1.3);
+}
+.hero-features__heroType .heroType-agility {
+  height: 50px;
+  width: 50px;
+  background: url("/src/icons/hero_agility.png") center center/cover no-repeat;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-filter: brightness(0.5) saturate(0.3);
+          filter: brightness(0.5) saturate(0.3);
+}
+.hero-features__heroType .heroType-intelligence {
+  height: 50px;
+  width: 50px;
+  background: url("/src/icons/hero_intelligence.png") center center/cover no-repeat;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-filter: brightness(0.5) saturate(1);
+          filter: brightness(0.5) saturate(1);
+}
+.hero-features .strength-main .heroType-strength {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-filter: saturate(1.3);
+          filter: saturate(1.3);
+}
+.hero-features .strength-main .heroType-agility {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-filter: brightness(0.5) saturate(0.3);
+          filter: brightness(0.5) saturate(0.3);
+}
+.hero-features .strength-main .heroType-intelligence {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-filter: brightness(0.5) saturate(1);
+          filter: brightness(0.5) saturate(1);
+}
+.hero-features .agility-main .heroType-strength {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-filter: brightness(0.5) saturate(0.3);
+          filter: brightness(0.5) saturate(0.3);
+}
+.hero-features .agility-main .heroType-agility {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-filter: saturate(1.3);
+          filter: saturate(1.3);
+}
+.hero-features .agility-main .heroType-intelligence {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-filter: brightness(0.5) saturate(1);
+          filter: brightness(0.5) saturate(1);
+}
+.hero-features .intelligence-main .heroType-strength {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
+}
+.hero-features .intelligence-main .heroType-agility {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-filter: brightness(0.4) saturate(1);
+          filter: brightness(0.4) saturate(1);
+}
+.hero-features .intelligence-main .heroType-intelligence {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-filter: saturate(1.3);
+          filter: saturate(1.3);
+}
+.hero-features__name {
+  font-weight: 700;
+  font-size: 44px;
+  color: rgb(248, 248, 248);
+  text-transform: uppercase;
+}
+.hero-features__content {
+  height: 100%;
+  width: 60%;
+  padding: 25px 10px 15px 25px;
+  margin-left: 15px;
+  background-color: transparent;
+  display: inline-block;
+}
+.hero-features__content__menu {
+  width: 40%;
+  margin: 3% auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-features__content__menu__abilities {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.hero-features__content__menu__abilities:hover {
+  color: rgb(92, 236, 255);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+.hero-features__content__menu__lore {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.hero-features__content__menu__lore:hover {
+  color: rgb(92, 236, 255);
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+.hero-features__content__lore {
+  max-height: 90vh;
+  overflow: scroll;
+  display: none;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 7%;
+}
+.hero-features__content__lore::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.hero-features__content__lore::-webkit-scrollbar:vertical {
+  width: 4px;
+}
+.hero-features__content__lore::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+.hero-features__content__lore::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2); /* цвет плашки */
+  border-radius: 20px; /* закругления плашки */
+  border: 0px solid #fff; /* padding вокруг плашки */
+}
+.hero-features__content__lore::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+.hero-features__content__abilities {
+  display: none;
+}
+.hero-features__content .active {
+  display: block;
+}
+.hero-features__content .skills {
+  width: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 0;
+}
+.hero-features__content .skills .skill {
+  width: 100%;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.hero-features__content .skills .skill__icon {
+  width: 40%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.hero-features__content .skills .skill__icon:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  text-decoration: none;
+}
+.hero-features__content .skills .skill__wrapper {
+  width: 100%;
+}
+.hero-features__content .skills .skill__wrapper__name {
+  margin-top: 5px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+.hero-features__content .skill__descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-features__content .skill__descr__characteristic {
+  width: 85%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-features__content .skill__descr__icon {
+  width: 20%;
+}
+.hero-features__content .skill__descr__wrapper {
+  margin-left: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.hero-features__content .skill__descr__wrapper__name {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+}
+.hero-features__content .skill__descr__wrapper__text {
+  max-height: 200px;
+  overflow: scroll;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+}
+.hero-features__content .skill__descr__wrapper__text::-webkit-scrollbar {
+  width: 0;
+}
+.hero-features__content .skill__descr__video {
+  margin-top: 6%;
+  width: 90%;
+}
+
+.herolist-heroPage__image__abaddon {
+  background: url("/src/img/heroesList/heroes/abaddon/abaddon.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__techies {
+  background: url("/src/img/heroesList/heroes/techies/techies.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__muerta {
+  background: url("/src/img/heroesList/heroes/muerta/muerta.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__alchemist {
+  background: url("/src/img/heroesList/heroes/alchemist/alchemist.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__ancientApparition {
+  background: url("/src/img/heroesList/heroes/ancient_apparition/ancient_apparition.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__ancientApparition .hero-features__image__wrapper {
+  bottom: 65px;
+}
+.herolist-heroPage__image__ancientApparition .hero-features__image__wrapper .herolist-heroPage__name {
+  font-size: 40px;
+}
+.herolist-heroPage__image__darkWillow {
+  background: url("/src/img/heroesList/heroes/dark_willow/dark_willow.png") center center/cover no-repeat;
+}
+.herolist-heroPage__image__invoker {
+  background: url("/src/img/heroesList/heroes/invoker/invo.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__arcwarden {
+  background: url("/src/img/heroesList/heroes/arcWarden/arc.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__antimage {
+  background: url("/src/img/heroesList/heroes/antimage/antimage.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__axe {
+  background: url("/src/img/heroesList/heroes/axe/axe.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__bane {
+  background: url("/src/img/heroesList/heroes/bane/bane.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__batrider {
+  background: url("/src/img/heroesList/heroes/batrider/batrider.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__visage {
+  background: url("/src/img/heroesList/heroes/visage/visage.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__gyro {
+  background: url("/src/img/heroesList/heroes/gyrocopter/gyro.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__io {
+  background: url("/src/img/heroesList/heroes/io/io.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__beastmaster {
+  background: url("/src/img/heroesList/heroes/beastmaster/beastmaster.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__nyxAssassin {
+  background: url("/src/img/heroesList/heroes/nyxassassin/nyx.jpg") center center/cover no-repeat;
+}
+.herolist-heroPage__image__rubick {
+  background: url("/src/img/heroesList/heroes/rubick/rubick.jpg") center center/cover no-repeat;
+}
+
+.newsPage {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//blog/bg_repeater.jpg");
+}
+.newsPage__text {
+  display: block;
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff;
+  text-shadow: 0 0 15px #FF0000;
+  text-align: center;
+  margin: 65px auto 35px auto;
+}
+.newsPage__promo .promo__container {
+  height: auto;
+}
+
+.news__block {
+  display: block;
+  margin: 15px auto 20px auto;
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+}
+
+body.lightTheme {
+  background-color: rgb(228, 228, 228);
+}
+body.lightTheme .section__title__smokeTop {
+  background: url("/src/img/radiant/homePage/smokeTop.png") center center/contain repeat;
+}
+body.lightTheme .section__title__smokeBot {
+  background: url("/src/img/radiant/homePage/smokeBot.png") center center/contain repeat;
+}
+body.lightTheme .section__title .left__horizBar, body.lightTheme .section__title .right__horizBar {
+  background-color: #00cdd4;
+}
+body.lightTheme .section__title .left__horizBar {
+  background: -webkit-gradient(linear, right top, left top, from(#00cdd4), to(rgb(228, 228, 228)));
+  background: linear-gradient(-90deg, #00cdd4, rgb(228, 228, 228));
+}
+body.lightTheme .section__title .right__horizBar {
+  background: -webkit-gradient(linear, left top, right top, from(#00cdd4), to(rgb(228, 228, 228)));
+  background: linear-gradient(90deg, #00cdd4, rgb(228, 228, 228));
+}
+body.lightTheme .section__title .section__name {
+  color: rgb(57, 57, 57);
+}
+body.lightTheme .section__title_joinBattle .left__horizBar {
+  background: -webkit-gradient(linear, right top, left top, from(#00cdd4), to(transparent));
+  background: linear-gradient(-90deg, #00cdd4, transparent);
+}
+body.lightTheme .section__title_joinBattle .right__horizBar {
+  background: -webkit-gradient(linear, left top, right top, from(#00cdd4), to(transparent));
+  background: linear-gradient(90deg, #00cdd4, transparent);
+}
+body.lightTheme .section__title_joinBattle .section__name {
+  text-shadow: 2px 2px 6px #00b7ff;
+  color: #fff;
+}
+body.lightTheme .header__logo img {
+  content: url("/src/icons/dota2_logo_blue.png");
+}
+body.lightTheme .header__menu__btn {
+  background-color: rgba(61, 61, 61, 0.8);
+  color: #fff;
+}
+body.lightTheme .header__menu__btn:hover {
+  background-color: #00b7ff;
+}
+body.lightTheme .header .changeTheme {
+  width: 50px;
+  height: 50px;
+  margin: calc(var(--index) * 1.2) auto 0 auto;
+  border-radius: 100%;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+body.lightTheme .header .changeTheme:hover {
+  background-color: rgb(90, 90, 90);
+}
+body.lightTheme .promo__bottom__wrap {
+  background-color: rgba(0, 0, 0, 0.46);
+  border-radius: 4px;
+  padding: 10px;
+}
+body.lightTheme .promo .layer__base {
+  background-image: url("/src/img/radiant/homePage/radiant__hero.png");
+}
+body.lightTheme .promo .layer__mainlayer {
+  background-image: url("/src/img/radiant/homePage/radiant_back_base.jpg");
+}
+body.lightTheme .promo .layer__middle {
+  background-image: url("/src/img/radiant/homePage/radiant_back_middle.png");
+}
+body.lightTheme .promo .layer__front {
+  background-image: url("/src/img/radiant/homePage/radiant_back_front.png");
+}
+body.lightTheme .promo__title {
+  color: rgb(247, 247, 247);
+  text-shadow: 0 0 12px #00b7ff;
+}
+body.lightTheme .promo .horizBar {
+  background-color: rgb(0, 0, 255);
+}
+body.lightTheme .steamBtn {
+  border-color: rgba(241, 241, 241, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-top: 12px;
+  z-index: 2;
+  color: rgb(255, 255, 255);
+}
+body.lightTheme .steamBtn:hover {
+  border-color: #00b7ff;
+}
+body.lightTheme .news__main .layer__base {
+  background-image: url("/src/img/radiant/homePage/news_back_base.jpg");
+}
+body.lightTheme .news__main .layer__middle {
+  background-image: url("/src/img/radiant/homePage/news_back_middle2.png");
+}
+body.lightTheme .news__main .layer__front {
+  background-image: url("/src/img/radiant/homePage/news_back_front.png");
+}
+body.lightTheme .heroes__wrapper {
+  background-image: url("/src/img/radiant/homePage/radiant_heroes.png");
+}
+body.lightTheme .cybersport__wrapper {
+  background-image: url("/src/img/radiant/homePage/radiant_cyber.png");
+}
+body.lightTheme .joinBattle__container {
+  background: url("/src/img/radiant/homePage/radiant_joinBattle.jpg") center center/cover no-repeat;
+}
+body.lightTheme .footer__descr {
+  color: #000;
+}
+body.lightTheme .mainBtn:hover {
+  border-color: #00cdd4;
+}
+body.lightTheme .mainBtn_joinBattle:hover {
+  border-color: #00b7ff;
+  text-shadow: 0 0 12px #00b7ff;
+}
+body.lightTheme .blogContainer:hover {
+  border-bottom-color: #00b7ff;
+}
+body.lightTheme .newsPage {
+  background-image: url("/src/img/radiant/homePage/radiant__news.png");
+}
+body.lightTheme .newsPage__text {
+  text-shadow: 0 0 15px #00b7ff;
+}
+body.lightTheme .header__menu__dropdown__item:hover {
+  color: #00cdd4;
+}
+
+@media (max-width: 1710px) {
+  .header {
+    grid-template-columns: 150px 871px 285px 100px;
+  }
+  .header__logo {
+    width: 135px;
+    z-index: 2;
+  }
+  .header__menu__btn {
+    width: 160px;
+    height: 45px;
+    font-size: 26px;
+  }
+  .header__menu__item:nth-child(4) a {
+    width: 210px;
+  }
+  .steamBtn {
+    width: 280px;
+    height: 75px;
+    font-size: 22px;
+    border-width: 4px;
+  }
+  .steamBtn span:nth-child(1) {
+    font-size: 55px;
+  }
+  .promo__container {
+    max-width: 1440px;
+  }
+  .promo__bottom {
+    width: 1300px;
+  }
+  .promo__bottom .steamBtn {
+    width: 320px;
+  }
+  .promo__title {
+    font-size: 44px;
+    line-height: 42px;
+  }
+  .promo__subtitle {
+    font-size: 24px;
+  }
+  .horizBar {
+    width: 400px;
+  }
+  .section__title .section__name {
+    font-size: 32px;
+  }
+  .section__title .left__horizBar, .section__title .right__horizBar {
+    width: 460px;
+  }
+  .section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+    width: 600px;
+  }
+  .section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+    width: 560px;
+  }
+  .section__title_joinBattle .left__horizBar, .section__title_joinBattle .right__horizBar {
+    width: 300px;
+  }
+}
+@media (max-width: 1440px) {
+  .promo__container {
+    max-width: 1200px;
+  }
+  .promo__bottom {
+    width: 1090px;
+  }
+  .promo__bottom__wrap {
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  .promo__bottom .steamBtn {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .promo__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .promo__subtitle {
+    font-size: 20px;
+  }
+  .horizBar {
+    height: 2px;
+  }
+  .header {
+    grid-template-columns: 120px 770px 250px;
+  }
+  .header__menu {
+    grid-template-columns: 125px 125px 125px 220px;
+  }
+  .header__menu__btn {
+    width: 145px;
+    font-size: 24px;
+    height: 40px;
+  }
+  .header__menu__item:nth-child(4) a {
+    width: 190px;
+  }
+  .header .changeTheme {
+    width: 45px;
+    height: 45px;
+  }
+  .header .changeTheme span {
+    font-size: 45px;
+  }
+  .changeThemeLogo {
+    display: block;
+  }
+  .changeThemeRight {
+    display: none;
+  }
+  .steamBtn {
+    width: 245px;
+  }
+  .steamBtn span:nth-child(2) {
+    font-size: 22px;
+  }
+  .steamBtn span:nth-child(1) {
+    font-size: 45px;
+  }
+  .cybersport__wrapper__content {
+    max-width: 1080px;
+    height: 425px;
+  }
+  .cybersport__wrapper__content__title {
+    font-size: 32px;
+  }
+  .cybersport__wrapper__content__descr {
+    font-size: 26px;
+  }
+  .cybersport__wrapper__content .mainBtn {
+    margin-top: 45px;
+  }
+  .section__title .section__name {
+    font-size: 32px;
+  }
+  .section__title .left__horizBar, .section__title .right__horizBar {
+    width: 460px;
+  }
+  .section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+    width: 500px;
+  }
+  .section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+    width: 480px;
+  }
+  .section__title_joinBattle .left__horizBar, .section__title_joinBattle .right__horizBar {
+    width: 300px;
+  }
+}
+@media (max-width: 1200px) {
+  .promo__container {
+    max-width: 992px;
+  }
+  .promo__bottom {
+    width: 915px;
+  }
+  .promo__bottom .steamBtn {
+    width: 275px;
+    height: 75px;
+  }
+  .promo__bottom .steamBtn__text__main {
+    font-size: 20px;
+  }
+  .promo__bottom .steamBtn__text__add {
+    font-size: 18px;
+  }
+  .promo__bottom .steamBtn span {
+    font-size: 40px;
+  }
+  .promo__title {
+    font-size: 30px;
+    line-height: 34px;
+  }
+  .promo__subtitle {
+    font-size: 20px;
+  }
+  .horizBar {
+    height: 2px;
+    width: 265px;
+  }
+  .header {
+    grid-template-columns: 120px 770px 45px;
+  }
+  .header__menu {
+    grid-template-columns: 125px 125px 125px 200px;
+  }
+  .header__menu__btn {
+    width: 135px;
+    height: 35px;
+    font-size: 22px;
+  }
+  .header__menu__item:nth-child(4) a {
+    width: 165px;
+  }
+  .header .steamBtn {
+    display: none;
+  }
+  .header .changeTheme {
+    width: 40px;
+    height: 40px;
+  }
+  .header .changeTheme span {
+    font-size: 40px;
+  }
+  .news__main__update {
+    height: 370px;
+  }
+  .news__main__otherUpdates {
+    height: 350px;
+  }
+  .heroes__wrapper__content__subtitle {
+    font-size: 28px;
+  }
+  .heroes__wrapper__content__title {
+    font-size: 40px;
+  }
+  .heroes__wrapper__content__descr {
+    font-size: 22px;
+  }
+  .heroes__wrapper__content .mainBtn {
+    width: 340px;
+    height: 70px;
+    font-size: 32px;
+  }
+  .cybersport__wrapper__content {
+    max-width: 830px;
+    height: 420px;
+  }
+  .cybersport__wrapper__content__title {
+    font-size: 28px;
+  }
+  .cybersport__wrapper__content__descr {
+    font-size: 22px;
+  }
+  .cybersport__wrapper__content .mainBtn {
+    margin-top: 40px;
+  }
+  .mainBtn__joinBattle {
+    width: 460px;
+    height: 100px;
+    font-size: 36px;
+  }
+  .section__title .section__name {
+    font-size: 32px;
+  }
+  .section__title .left__horizBar, .section__title .right__horizBar {
+    width: 420px;
+  }
+  .section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+    width: 400px;
+  }
+  .section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+    width: 370px;
+  }
+  .section__title_joinBattle .left__horizBar, .section__title_joinBattle .right__horizBar {
+    width: 230px;
+  }
+}
+@media (max-width: 991px) {
+  .promo__container {
+    max-width: 768px;
+  }
+  .promo__bottom {
+    width: 705px;
+  }
+  .promo__bottom .steamBtn {
+    width: 240px;
+    height: 70px;
+  }
+  .promo__bottom .steamBtn__text__main {
+    font-size: 18px;
+  }
+  .promo__bottom .steamBtn__text__add {
+    display: none;
+  }
+  .promo__bottom .steamBtn span {
+    font-size: 36px;
+  }
+  .promo__title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .promo__subtitle {
+    font-size: 20px;
+  }
+  .horizBar {
+    height: 2px;
+    width: 265px;
+  }
+  .header {
+    grid-template-columns: 90px 760px;
+  }
+  .header__menu {
+    grid-template-columns: 100px 100px 100px 200px;
+  }
+  .header__menu__btn {
+    width: 120px;
+    height: 35px;
+    font-size: 20px;
+  }
+  .header__menu__item:nth-child(4) button {
+    width: 150px;
+  }
+  .header .steamBtn {
+    display: none;
+  }
+  .header__logo {
+    width: 90px;
+  }
+  .news__main {
+    min-height: 750px;
+  }
+  .news__main__update {
+    height: 250px;
+  }
+  .news__main__update .blogContainer {
+    padding: 0 0 8px 10px;
+  }
+  .news__main__update .blogContainer__title {
+    font-size: 20px;
+  }
+  .news__main__update .blogContainer__Date {
+    font-size: 18px;
+  }
+  .news__main__update .blogContainer__mainText {
+    font-size: 18px;
+  }
+  .news__main__otherUpdates {
+    height: 250px;
+  }
+  .news__main__otherUpdates .blogContainer {
+    padding: 0 0 8px 10px;
+  }
+  .news__main__otherUpdates .blogContainer__title {
+    font-size: 18px;
+  }
+  .news__main__otherUpdates .blogContainer__Date {
+    font-size: 16px;
+  }
+  .news__main__otherUpdates .blogContainer__mainText {
+    font-size: 16px;
+  }
+  .heroes__wrapper__content__subtitle {
+    font-size: 24px;
+  }
+  .heroes__wrapper__content__title {
+    font-size: 32px;
+  }
+  .heroes__wrapper__content__descr {
+    font-size: 20px;
+  }
+  .heroes__wrapper__content .mainBtn {
+    width: 320px;
+    height: 60px;
+    font-size: 28px;
+  }
+  .cybersport__wrapper__content {
+    max-width: 695px;
+    height: 380px;
+  }
+  .cybersport__wrapper__content__title {
+    font-size: 22px;
+  }
+  .cybersport__wrapper__content__descr {
+    font-size: 20px;
+  }
+  .cybersport__wrapper__content .mainBtn {
+    width: 258px;
+    height: 60px;
+    font-size: 28px;
+    margin-top: 40px;
+  }
+  .section__title_joinBattle .section__name {
+    font-size: 36px;
+  }
+  .mainBtn__joinBattle {
+    width: 400px;
+    height: 80px;
+    font-size: 28px;
+    border-width: 5px;
+  }
+  .section__title .section__name {
+    font-size: 32px;
+  }
+  .section__title .left__horizBar, .section__title .right__horizBar {
+    width: 370px;
+  }
+  .section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+    width: 300px;
+  }
+  .section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+    width: 275px;
+  }
+  .section__title_joinBattle .left__horizBar, .section__title_joinBattle .right__horizBar {
+    width: 230px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    display: none;
+  }
+  .mobileHeader {
+    display: block;
+    position: fixed;
+    width: 100%;
+    min-height: 50px;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .mobileHeader__container {
+    position: fixed;
+    display: block;
+    margin: 0 auto;
+    top: 0;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 6px 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+  }
+  .mobileHeader__container_active {
+    right: 0;
+  }
+  .mobileHeader__container_active-non-clickable {
+    width: 60%;
+    height: 100vh;
+    background: transparent;
+    position: fixed;
+    top: 50px;
+    left: 0;
+  }
+  .mobileHeader__menu {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+  }
+  .mobileHeader__menu__item {
+    display: block;
+    margin: 0 auto;
+  }
+  .mobileHeader__menu__btn {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .mobileHeader__logo {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 90px;
+    margin-top: 50px;
+  }
+  .mobileHeader__logo img {
+    width: 100%;
+  }
+  .mobileHeader .changeTheme {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: white;
+    border-radius: 100%;
+    width: 27px;
+    height: 27px;
+  }
+  .mobileHeader .changeTheme span {
+    font-size: 27px;
+  }
+  .mobileHeader .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 26px;
+    height: 12px;
+  }
+  .mobileHeader .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 2px;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  .mobileHeader .hamburger_active span {
+    margin-bottom: -2px;
+  }
+  .mobileHeader .hamburger_active span:nth-child(1) {
+    -webkit-transform: translateY(3px) rotate(-45deg);
+            transform: translateY(3px) rotate(-45deg);
+  }
+  .mobileHeader .hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  .mobileHeader .hamburger_active span:nth-child(3) {
+    -webkit-transform: translateY(3px) rotate(45deg);
+            transform: translateY(3px) rotate(45deg);
+  }
+  .promo__bottom {
+    width: 535px;
+    height: 200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .promo__bottom__wrap {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .promo__bottom .steamBtn {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    display: none;
+  }
+  .news__main {
+    min-height: 930px;
+  }
+  .news__main__update {
+    height: 340px;
+  }
+  .news__main__otherUpdates {
+    height: 340px;
+  }
+  .news .blogContainer__title {
+    font-size: 20px;
+  }
+  .news .blogContainer__mainText {
+    font-size: 20px;
+  }
+  .news .blogContainer__Date {
+    font-size: 16px;
+  }
+  .cybersport {
+    min-height: 900px;
+  }
+  .cybersport__wrapper {
+    min-height: 800px;
+  }
+  .cybersport__wrapper__content {
+    max-width: 550px;
+    height: 360px;
+  }
+  .cybersport__wrapper__content__title {
+    font-size: 20px;
+  }
+  .cybersport__wrapper__content__descr {
+    font-size: 18px;
+  }
+  .cybersport__wrapper__content .mainBtn {
+    width: 250px;
+    height: 60px;
+    font-size: 28px;
+    margin-top: 8px;
+  }
+  .footer__descr {
+    font-size: 14px;
+  }
+  .footer .dotalogo {
+    max-height: 80px;
+    margin: 0 auto 10px auto;
+  }
+  .section__title {
+    min-height: 35px;
+  }
+  .section__title .section__name {
+    font-size: 24px;
+  }
+  .section__title .left__horizBar, .section__title .right__horizBar {
+    width: 270px;
+    height: 4px;
+  }
+  .section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+    width: 215px;
+  }
+  .section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+    width: 200px;
+  }
+  .section__title_joinBattle {
+    padding: 0 10px 0 10px;
+  }
+  .section__title_joinBattle .section__name {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) {
+  .mobileHeader__container {
+    padding: 6px 10px;
+  }
+  .mobileHeader__logo {
+    width: 75px;
+  }
+  .mobileHeader__menu__btn {
+    width: 100px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .mobileHeader__menu__item:nth-child(4) .mobileHeader__menu__btn {
+    width: 111px;
+  }
+  .promo__bottom {
+    width: 90%;
+    height: 215px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    z-index: 3;
+  }
+  .promo__bottom__wrap {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    width: 100%;
+  }
+  .promo__title {
+    text-align: center;
+    width: 100%;
+    font-size: calc(10px + 3.125vw);
+    line-height: 28px;
+  }
+  .promo__subtitle {
+    display: none;
+  }
+  .horizBar {
+    margin: 0 auto;
+  }
+  .news__main {
+    min-height: 750px;
+  }
+  .news__main__update {
+    height: 250px;
+  }
+  .news__main__update .blogContainer {
+    padding: 0 0 8px 10px;
+  }
+  .news__main__update .blogContainer__title {
+    font-size: 18px;
+  }
+  .news__main__update .blogContainer__Date {
+    display: none;
+  }
+  .news__main__update .blogContainer__mainText {
+    display: none;
+  }
+  .news__main__otherUpdates {
+    height: 250px;
+  }
+  .news__main__otherUpdates .blogContainer {
+    padding: 0 0 8px 10px;
+  }
+  .news__main__otherUpdates .blogContainer__title {
+    font-size: 18px;
+  }
+  .news__main__otherUpdates .blogContainer__Date {
+    display: none;
+  }
+  .news__main__otherUpdates .blogContainer__mainText {
+    display: none;
+  }
+  .heroes {
+    min-height: 1000px;
+  }
+  .heroes__wrapper {
+    min-height: 955px;
+    background-position-y: 410px;
+    background-size: 900px;
+  }
+  .heroes__wrapper__content {
+    bottom: 45px;
+  }
+  .heroes__wrapper__content__subtitle {
+    font-size: calc(10px + 2.6041666667vw);
+  }
+  .heroes__wrapper__content__title {
+    font-size: calc(10px + 4.3402777778vw);
+  }
+  .heroes__wrapper__content__descr {
+    font-size: calc(10px + 1.3888888889vw);
+    padding: 0 3px;
+  }
+  .heroes__wrapper__content .mainBtn {
+    width: calc(60px + 38.1944444444vw);
+    height: 47px;
+    height: calc(40px + 1.7361111111vw);
+    border-width: 4px;
+  }
+  .heroes__wrapper__content .mainBtn__descr {
+    font-size: calc(10px + 2.9513888889vw);
+  }
+  .cybersport {
+    min-height: 735px;
+  }
+  .cybersport__wrapper {
+    min-height: 700px;
+  }
+  .cybersport__wrapper__content {
+    max-width: calc(80px + 73.2638888889vw);
+    height: 340px;
+    padding: 30px 10px 0 10px;
+  }
+  .cybersport__wrapper__content__title {
+    font-size: calc(10px + 2.6041666667vw);
+  }
+  .cybersport__wrapper__content__descr {
+    font-size: calc(10px + 1.2152777778vw);
+  }
+  .cybersport__wrapper__content .mainBtn {
+    width: 200px;
+    height: 50px;
+    font-size: 24px;
+  }
+  .joinBattle__container {
+    min-height: 455px;
+  }
+  .joinBattle__container .mainBtn__joinBattle {
+    width: 205px;
+    height: 62px;
+    font-size: 20px;
+    border-width: 4px;
+  }
+  .footer__descr {
+    font-size: 12px;
+  }
+  .section__title {
+    min-height: 35px;
+  }
+  .section__title .section__name {
+    font-size: 24px;
+  }
+  .section__title .left__horizBar, .section__title .right__horizBar {
+    width: 125px;
+    height: 3px;
+  }
+  .section__title_heroes {
+    min-height: 100px;
+  }
+  .section__title_heroes .left__horizBar, .section__title_heroes .right__horizBar {
+    width: 32.9861111111vw;
+  }
+  .section__title_cybersport .section__title__smokeTop {
+    height: 65px;
+  }
+  .section__title_cybersport .left__horizBar, .section__title_cybersport .right__horizBar {
+    width: 200px;
+  }
+  .section__title_joinBattle .left__horizBar, .section__title_joinBattle .right__horizBar {
+    display: none;
+  }
+  .heroesListAdd {
+    grid-template-rows: 305px 2px 17px;
+  }
+}
+@media (max-width: 380px) {
+  .promo__bottom {
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .heroes__Nav {
+    height: 125px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .heroes__Nav__filter__attribute__text {
+    font-size: 22px;
+  }
+  .heroes__Nav__filter .btn {
+    width: 28px;
+    height: 28px;
+  }
+  .heroes__Nav__filter__complexity__text {
+    font-size: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .heroes__Nav {
+    height: 140px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .heroes__Nav__filter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .heroes__Nav__filter__complexity {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  form {
+    width: 265px;
+  }
+  .heroesPage__promo .promo__container .promo__bottom {
+    width: 250px;
+    bottom: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .heroesPage__promo .promo__container .promo__title {
+    font-size: 29px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 1440px) {
+  .hero-features__image {
+    max-height: 730px;
+  }
+  .hero-features__heroType .heroType-strength {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-features__heroType .heroType-agility {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-features__heroType .heroType-intelligence {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-features__content .skills .skill__icon {
+    width: 50%;
+  }
+}
+@media (max-width: 1200px) {
+  .hero-features__promo .promo__container .header {
+    grid-template-columns: 12% 85%;
+  }
+  .hero-features__image {
+    max-height: 700px;
+  }
+  .hero-features__heroType .heroType-strength {
+    height: 35px;
+    width: 35px;
+  }
+  .hero-features__heroType .heroType-agility {
+    height: 35px;
+    width: 35px;
+  }
+  .hero-features__heroType .heroType-intelligence {
+    height: 35px;
+    width: 35px;
+  }
+  .hero-features__content__menu {
+    width: 50%;
+  }
+  .hero-features__content .skills .skill__wrapper__name {
+    font-size: 18px;
+  }
+}
+@media (max-width: 991px) {
+  .hero-features__promo-subtitle {
+    display: none;
+  }
+  .hero-features__promo-title {
+    font-size: 44px;
+  }
+  .hero-features__image {
+    min-width: 230px;
+    max-height: 540px;
+  }
+  .hero-features__name {
+    font-size: 34px;
+  }
+  .hero-features__heroType .heroType-strength {
+    height: 32px;
+    width: 32px;
+  }
+  .hero-features__heroType .heroType-agility {
+    height: 32px;
+    width: 32px;
+  }
+  .hero-features__heroType .heroType-intelligence {
+    height: 32px;
+    width: 32px;
+  }
+  .hero-features__content__menu {
+    width: 60%;
+  }
+  .hero-features__content .skills .skill__icon {
+    width: 65%;
+  }
+  .hero-features__content .skills .skill__wrapper__name {
+    font-size: 15px;
+  }
+  .hero-features__content .skill__descr__wrapper__text {
+    font-size: 16px;
+  }
+  .hero-features__content .skill__descr__wrapper__text::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  .hero-features__content .skill__descr__wrapper__text::-webkit-scrollbar:vertical {
+    width: 4px;
+  }
+  .hero-features__content .skill__descr__wrapper__text::-webkit-scrollbar:horizontal {
+    height: 0;
+  }
+  .hero-features__content .skill__descr__wrapper__text::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.2); /* цвет плашки */
+    border-radius: 20px; /* закругления плашки */
+    border: 0px solid #fff; /* padding вокруг плашки */
+  }
+  .hero-features__content .skill__descr__wrapper__text::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+  }
+}
+@media (max-width: 767px) {
+  .hero-features {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .hero-features__promo .promo__container .promo__bottom {
+    width: 250px;
+    bottom: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .hero-features__image {
+    min-width: 86%;
+    min-height: 280px;
+  }
+  .hero-features__image__wrapper {
+    bottom: 50px;
+  }
+  .hero-features__name {
+    font-size: 32px;
+  }
+  .hero-features__heroType .heroType-strength {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-features__heroType .heroType-agility {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-features__heroType .heroType-intelligence {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-features__content {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+  }
+  .hero-features__content .skills .skill__icon {
+    width: 55%;
+  }
+  .hero-features__content__lore {
+    padding: 0px 20px 0 20px;
+  }
+  .hero-features__content .skill__descr__video {
+    width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .hero-features__content__menu {
+    width: 70%;
+  }
+  .hero-features__content__menu__abilities {
+    font-size: 23px;
+  }
+  .hero-features__content__menu__lore {
+    font-size: 23px;
+  }
+  .hero-features__content .skills .skill__icon {
+    width: 80%;
+  }
+  .hero-features__content .skills .skill__wrapper__name {
+    font-size: 12px;
+  }
+  .hero-features__content .skill__descr__icon {
+    width: 25%;
+  }
+  .hero-features__content .skill__descr__wrapper__name {
+    font-size: 20px;
+  }
+  .hero-features__content .skill__descr__wrapper__text {
+    font-size: 15px;
+  }
+  .hero-features__content__lore {
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .newsPage__text {
+    font-size: 32px;
+  }
+}
+@media (max-width: 1440px) {
+  body.lightTheme .header .changeTheme {
+    width: 45px;
+    height: 45px;
+  }
+  body.lightTheme .header .changeTheme span {
+    font-size: 45px;
+  }
+}
+@media (max-width: 1200px) {
+  body.lightTheme .header .changeTheme {
+    width: 40px;
+    height: 40px;
+  }
+  body.lightTheme .header .changeTheme span {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+  body.lightTheme .mobileHeader__menu__btn {
+    background-color: rgb(230, 230, 230);
+    color: #000;
+  }
+  body.lightTheme .mobileHeader__logo img {
+    content: url("/src/icons/dota2_logo_blue.png");
+  }
+}
+@media (max-width: 440px) {
+  body.lightTheme .promo__bottom {
+    width: 100%;
+  }
+  body.lightTheme .promo__bottom__wrap {
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.min.css.map */

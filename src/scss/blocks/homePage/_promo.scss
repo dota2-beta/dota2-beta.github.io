@@ -1,0 +1,237 @@
+.promo {
+ 	background-color: black;
+	position: relative;
+	//height: 100vh;
+	overflow: hidden;
+	&__container {
+		//min-height: 950px;
+		position: relative;
+		max-width: 1920px;
+		margin: 0 auto;
+		height: 100vh;
+		overflow: hidden;
+		//transform: translate3d(0,calc(var(--scrollTop) / 2),0);
+	}
+	&__bottom {
+		min-height: 195px;
+		width: 1650px;
+		position: absolute;
+		//bottom: 210px;
+		//left: 40px;
+		bottom: calc(var(--index) * 8.5);
+		left: calc(var(--index) * 2);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 54px;
+		line-height: 52px;
+		color: #fff;
+		text-shadow: 0 0 15px $dire-add-color;//ffb650
+		text-transform: uppercase;
+	}
+	&__subtitle {
+		//position: relative;
+		font-size: 28px;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+	}
+}
+
+.layer {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: center;
+	will-change: transform;
+	&__base {
+		background-image:url('/src/img/dire/homePage/promo_base.jpg');
+	}
+	&__middle {
+		background-image:url('/src/img/dire/homePage/dire_back_middle.png');
+	}
+	&__front {
+		background-image:url('/src/img/dire/homePage/dire_back_front.png');
+		z-index: 2;
+		pointer-events: none;
+		&__logo {
+			z-index: 0;
+		}
+	}
+}
+
+.horizBar {
+	width: 568px;
+	height: 3px;
+	background-color: rgb(255, 0, 0);
+}
+
+.header {
+	max-width: 1725px;
+ 	margin: 0 auto;
+	padding: 33px 0 0 33px;
+	display: grid;
+	grid-template-columns: 235px 900px 455px 100px;
+	position: relative;
+	&__logo{
+		margin-top: calc(var(--index) * 1.1);
+		position: relative;
+		width: 175px;
+		img {
+			width: 100%;
+		}
+	}
+	&__menu {
+		//margin-top: 26px;
+		margin-top: calc(var(--index) * 1.2);
+		display: grid;
+		grid-template-columns: 159px 159px 159px 254px;
+		gap: 37px;
+		list-style-type: none;
+		&__btn {
+			display: block;
+			text-align: center;
+			font-size: 28px;
+			width: 175px;
+			height: 46px;
+			background-color: #fff;
+			border: none;
+			cursor: pointer;
+			font-weight: 700;
+			text-transform: uppercase;
+			transition: 0.5s;
+			&:hover{
+				background-color: $dire-main-color;
+				transform:translateY(-5px);
+				text-decoration: none;
+				color: #000;
+			}
+			text-decoration: none;
+			color: #000;
+			
+		}
+		&__item {
+			&:nth-child(4){
+				a {
+					width: 215px;
+				}
+			}
+			&:nth-child(1){
+				div:hover {
+					transform:translateY(0);
+				}
+			}
+		}
+		&__dropdown {
+			background-color: rgba($color: #6a6a6a, $alpha: 0.7);
+			border-radius: 3px;
+			border: 3px solid rgb(220, 220, 220);  /* padding вокруг плашки */
+			width: 190px;
+			height: 150px;
+			display: flex;
+			flex-direction: column;
+			opacity: 0;
+			transition: all 0.4s;
+			&__item {
+				display: block;
+				margin-top: 10px;
+				text-align: center;
+				color: #fff;
+				font-size: 16px;
+				font-weight: 500;
+				transition: all 0.3s;
+				&:hover{
+					transform: scale(1.05);
+					text-decoration: none;
+					color: $dire-main-color;
+				}
+			}
+		}
+	}
+	.changeTheme {
+		width: 50px;
+		height: 50px;
+		margin: calc(var(--index) * 1.2) auto 0 auto;
+		border-radius: 100%;
+		background-color: #fff;
+		cursor: pointer;
+		transition: all 0.3s;
+		&:hover {
+			background-color: rgb(150, 150, 150);
+		}
+		span {
+			font-size: 50px;
+		}
+	}
+}
+
+.changeThemeLogo {
+	display: none;
+}
+
+.steam {
+	text-decoration: none; /* no underline */
+}
+.steamBtn {
+	width: 428px;
+	height: 88px;
+	margin-top: calc(var(--index));
+	margin-left: 5px;
+	border-style: solid;
+	border-width: 5px;
+	border-radius: 20px;
+	border-color: #fff;
+	cursor: pointer;
+	transition: 0.5s;
+	&:hover{
+		border-color: $dire-main-color;
+		transform:translateY(-5px);
+	}
+	display: flex;
+	justify-content:space-around;
+	align-items: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 28px;
+	text-align: center;
+	span:nth-child(1) {
+		font-size: 75px;
+	}
+	&__text__add {
+		font-size: 18px;
+	}
+	text-decoration: none;
+	color: #fff;
+}
+
+.mobileHeader {
+	display: none;
+}
+
+.hamburger {
+	display: none;
+}
+
+.cyberContainer {
+	position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+	&__icon {
+		background: url('/src/img/gear.png') center (center / cover) no-repeat;
+		width: 200px;
+		height: 200px;
+		margin: 0 auto;
+	}
+	&__text {
+		font-size: 34px;
+		color: #fff;
+		text-align: center;
+		font-weight: 700;
+	}
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dota 2</title>
+	<link rel="stylesheet" href="/src/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="/src/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/src/css/font.css">
+	<link rel="stylesheet" href="/src/css/style.min.css">
+	<script src="/src/js/heroesPages/alchemist.js" defer></script>
+	<script src="/src/js/app.js" defer></script>
+
+</head>
+<body>
+	<div class="mobileHeader">
+		<div class="changeTheme">
+			<span class="icon-IcoMoon"></span>
+		</div>
+		<div class="mobileHeader__container">
+			<a href="/src/index.html" class="mobileHeader__logo">
+				<img src="/src/icons/dota2_logo_red.png" alt="logo">
+			</a>
+			<nav>
+				<ul class="header__menu mobileHeader__menu">
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">игра</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/heroes.html" class="header__menu__btn mobileHeader__menu__btn">герои</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">новости</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">киберспорт</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<section class="promo hero-features__promo">
+		<!-- <div data-speed=".10" class="layer layer__base"></div>
+		<div data-speed=".6" class="layer layer__middle"></div> -->
+		<div data-speed=".9" class="layer layer__base layer__hero"></div>
+		<div class="promo__container">
+			<header class="header">
+				<a href="/src/index.html" class="header__logo">
+					<img src="/src/icons/dota2_logo_red.png" alt="logo">
+				</a>
+				<nav>
+					<ul class="header__menu">
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">игра</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/heroes.html" class="header__menu__btn">герои</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/news.html" class="header__menu__btn">новости</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">киберспорт</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+					<span class="icon-steam_logo"></span>
+					<span>играть бесплатно</span> 
+				</a>
+				<div class="changeTheme">
+					<span class="icon-IcoMoon"></span>
+				</div>
+			</header>
+		<div class="hero-features herolist-heroPage">	
+			<div class="hero-features__image herolist-heroPage__image__alchemist">
+				<div class="hero-features__image__wrapper">
+					<div class="hero-features__name herolist-heroPage__name">Alchemist</div>
+					<div class="hero-features__heroType strength-main">
+						<div class="heroType-strength"></div>
+						<div class="heroType-agility"></div>
+						<div class="heroType-intelligence"></div>
+					</div>
+				</div>
+				<div class="hero-features__image__descr">
+					Alchemist, синтезирующий дополнительные средства за каждое убийство, с лёгкостью получает необходимое вооружение. Он сражается во имя своей жадности, используя едкую кислоту и запас нестабильных химикатов.
+				</div>
+				<div class="hero-features__image__fadeContainer"></div>
+			</div>
+			<div class="hero-features__content">
+				<div class="hero-features__content__menu">
+					<div class="hero-features__content__menu__abilities">abilities</div>
+					<div class="hero-features__content__menu__lore">lore</div>
+				</div>
+				<div class="hero-features__content__abilities active">
+					<ul class="skills">
+						<li class="skill" id="skill-1">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/alchemist_acid_spray.png" alt="skill-1" class="skill__icon skill__icon-1">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">ACID SPRAY</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-2">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/alchemist_unstable_concoction.png" alt="skill-2" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">UNSTABLE CONCOCTION</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-3">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/alchemist_corrosive_weaponry.png" alt="skill-3" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">CORROSIVE WEAPONRY</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-4">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/alchemist_chemical_rage.png" alt="skill-4" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">CHEMICAL RAGE</div>
+							</div>
+						</li>
+					</ul>
+					<div class="skill__descr">
+						<div class="skill__descr__characteristic">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/alchemist_acid_spray.png" alt="skill-descr" class="skill__descr__icon">
+							<div class="skill__descr__wrapper">
+								<div class="skill__descr__wrapper__name">ACID SPRAY</div>
+								<div class="skill__descr__wrapper__text">Распыляет в указанной области облако кислоты, которое наносит врагам периодический урон и снижает их броню.</div>
+							</div>
+						</div>
+						<video class="skill__descr__video" autoplay="" preload="auto" loop="" playsinline="" muted="">
+							<source class="video-source-webm" type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_dead_shot.webm">
+							<source class="video-source-mp4" type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/muerta/muerta_dead_shot.mp4">
+						</video>
+					</div>
+				</div>
+				<div class="hero-features__content__lore">
+					Преданность священной алхимии была традицией рода Темноваров, но никто ещё никогда не показывал столько изобретательности, амбиций и безрассудства, сколько проявил юный Раззил. Повзрослев, он оставил семейное дело и решил попробовать себя в производстве золота.<br>
+					В присущей ему манере он объявил, что обратит в золото целую гору. Спустя два десятилетия исследований, вложений и подготовок он с треском провалился, попав за решётку за множественные разрушения, причинённые экспериментом. Однако Раззил был не из робкого десятка и тщательно обдумывал варианты побега, чтобы продолжить свои исследования.<br>
+					Когда его новым сокамерником оказался свирепый великан-людоед, алхимик увидел в нем столь желанную возможность для побега. Уговорив гиганта не съедать его, Раззил начал тщательно составлять настойку из плесени и мха, найденных во время исправительных работ. Через неделю она созрела. Когда великан выпил зелье, он впал в ослепительную ярость, разорвал железные прутья, разнёс стены и перебил всю стражу.<br>
+					Скоро они затерялись где-то в лесу, окружавшем город, оставив за собой следы разрушений и никаких признаков погони. Когда действие тоника отошло, людоед чувствовал себя вполне хорошо и выглядел счастливым и вполне энергичным. Решив работать вместе, с тех пор парочка собирает материалы, необходимые Раззилу, чтобы в очередной раз попытать удачу.
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<footer class="footer">
+		<div class="section__title">
+			<div class="section__title__smokeTop"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<img class="dotalogo" src="/src/icons/dota2_logo_red.png" alt="">
+				</div>
+				<div class="col-md-8">
+					<div class="footer__descr"> 
+						Dota и логотип Dota являются товарными знаками и/или зарегистрированными товарными знаками Wolf Corporation. 2023
+						Wolf Corporation, все права защищены.
+					</div>
+				</div>
+				<div class="col-md-2">
+					<img class="vaclogo" src="https://pic.rutubelist.ru/video/78/e9/78e9e07a74662f8966f8c70c08ed794b.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

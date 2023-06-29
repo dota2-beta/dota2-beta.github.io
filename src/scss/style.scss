@@ -1,0 +1,42 @@
+@import 'base/variables';
+* {
+    font-family: 'Palatino Linotype', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: rgba($color: #000, $alpha: 0.2);        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgba($color: #fff, $alpha: 0.7);    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 3px solid rgb(40, 40, 40);  /* padding вокруг плашки */
+}
+@import 'base/other';
+@import 'blocks/homePage/promo';
+@import 'blocks/homePage/news';
+@import 'blocks/homePage/heroes';
+@import 'blocks/homePage/cybersport';
+@import 'blocks/homePage/joinBattle';
+@import 'blocks/footer';
+
+@import 'blocks/heroesPage/heroesPage';
+@import 'blocks/heroesPage/hero-features';
+@import 'blocks/heroesPage/heroesList/heroes-characteristics';
+@import 'blocks/newsPage/newsPage';
+@import 'lightTheme';
+@import 'base/media';
+@import 'base/heroes/media_heroesPage';
+@import 'base/heroes/heroesList/media_heroes-features';
+@import 'base/news/media-news';
+@import 'base/mediaLight';

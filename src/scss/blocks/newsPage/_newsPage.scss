@@ -1,0 +1,27 @@
+// url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//blog/bg_repeater.jpg"
+.newsPage {
+	background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//blog/bg_repeater.jpg");
+	&__text {
+		display: block;
+		font-weight: 700;
+		font-size: 40px;
+		color: #fff;
+		text-shadow: 0 0 15px $dire-add-color;//ffb650
+		text-align: center;
+		margin: 65px auto 35px auto;
+	}
+	&__promo {
+		.promo__container {
+			height: auto;
+		}
+	}
+}
+
+.news__block {
+	display: block;
+	margin: 15px auto 20px auto;
+	font-weight: 500;
+	font-size: 24px;
+	color: #fff;
+	padding: 10px;
+}

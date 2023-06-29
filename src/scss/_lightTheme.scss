@@ -1,0 +1,168 @@
+body.lightTheme {
+	background-color: $radiant-back;
+	.section__title {
+		&__smokeTop {
+			background: url('/src/img/radiant/homePage/smokeTop.png') center (center / contain) repeat;
+		}
+		&__smokeBot{
+			background: url('/src/img/radiant/homePage/smokeBot.png') center (center / contain) repeat;
+		}
+		.left__horizBar, .right__horizBar {
+			background-color: $radiant-main-color;
+		}
+		.left__horizBar {
+			background: linear-gradient(-90deg, $radiant-main-color, $radiant-back);
+		}
+		.right__horizBar {
+			background: linear-gradient(90deg, $radiant-main-color, $radiant-back);
+		}
+		.section__name {
+			color: rgb(57, 57, 57);
+		}
+		&_joinBattle {
+
+			.left__horizBar {
+				background: linear-gradient(-90deg, $radiant-main-color, transparent);
+			}
+			.right__horizBar {
+				background: linear-gradient(90deg, $radiant-main-color, transparent);
+			}
+			.section__name {
+				text-shadow: 2px 2px 6px $radiant-add-color;//ffb650
+				color: #fff;
+			}
+		}
+	}
+	.header {
+		&__logo {
+			img{
+				content: url('/src/icons/dota2_logo_blue.png');
+			}
+		}
+		&__menu {
+			&__btn {
+				background-color: rgba(61, 61, 61,0.8);
+				color: #fff;
+				&:hover{
+					background-color: $radiant-add-color;
+				}
+			}
+		}
+		.changeTheme {
+			width: 50px;
+			height: 50px;
+			margin: calc(var(--index) * 1.2) auto 0 auto;
+			border-radius: 100%;
+			background-color: #000;
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				background-color: rgb(90, 90, 90);
+			}
+		}
+	}
+	.promo {
+		&__bottom {
+			// width: 98%;
+			&__wrap {
+				background-color: rgba(0, 0, 0, 0.46);;
+				border-radius: 4px;
+				padding: 10px;
+			}
+		}
+		.layer { 
+			&__base {
+				background-image:url('/src/img/radiant/homePage/radiant__hero.png');
+			}
+			&__mainlayer {
+				background-image:url('/src/img/radiant/homePage/radiant_back_base.jpg');
+			}
+			&__middle {
+				background-image:url('/src/img/radiant/homePage/radiant_back_middle.png');
+			}
+			&__front {
+				background-image:url('/src/img/radiant/homePage/radiant_back_front.png');
+			}
+			
+		}
+	   &__title {
+			color: rgb(247, 247, 247);
+			text-shadow: 0 0 12px $radiant-add-color;//ffb650
+			// font-size: 54px;
+			// line-height: 56px;
+			//text-align: center;
+	   }
+	.horizBar {
+		background-color: rgb(0, 0, 255);
+	}
+   }
+   .steamBtn {
+		border-color: rgba(241, 241, 241, 0.8);
+		background-color: rgba(0, 0, 0, 0.2);
+		margin: 0 auto;
+		margin-top: 12px;
+		z-index: 2;
+		&:hover{
+			border-color: $radiant-add-color;
+		}
+		color: rgb(255, 255, 255);
+	}
+	.news{
+		&__main {
+			.layer {
+				&__base {
+					background-image:url('/src/img/radiant/homePage/news_back_base.jpg');
+				}
+				&__middle {
+					background-image:url('/src/img/radiant/homePage/news_back_middle2.png');
+				}
+				&__front {
+					background-image:url('/src/img/radiant/homePage/news_back_front.png');
+				}
+			}
+		}
+	}
+	.heroes__wrapper {
+		background-image: url('/src/img/radiant/homePage/radiant_heroes.png');
+	}
+	// .heroesPage {
+	// 	background-image: url('/src/img/radiant/homePage/radiant_heroes_back.png');
+	// }
+	.cybersport__wrapper {
+		background-image: url('/src/img/radiant/homePage/radiant_cyber.png');
+	}
+	.joinBattle__container {
+		background: url('/src/img/radiant/homePage/radiant_joinBattle.jpg') center (center / cover) no-repeat;
+	}
+	.footer {
+		&__descr{
+			color: #000;
+		}
+	}
+	.mainBtn {
+		&:hover {
+			border-color: $radiant-main-color;
+		}
+		&_joinBattle {
+			&:hover {
+				border-color: $radiant-add-color;
+				text-shadow: 0 0 12px $radiant-add-color;
+			}
+		}
+	}
+	.blogContainer {
+		&:hover{
+			//background: rgba(0,0,0,.7);
+			border-bottom-color: $radiant-add-color;
+		}
+	}
+	.newsPage {
+		background-image: url('/src/img/radiant/homePage/radiant__news.png');
+		&__text {
+			text-shadow: 0 0 15px $radiant-add-color;
+		}
+	}
+	.header__menu__dropdown__item:hover {
+		color: $radiant-main-color;
+	}
+}

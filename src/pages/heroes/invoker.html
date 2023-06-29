@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dota 2</title>
+	<link rel="stylesheet" href="/src/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="/src/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/src/css/font.css">
+	<link rel="stylesheet" href="/src/css/style.min.css">
+	<script src="/src/js/heroesPages/invoker.js" defer></script>
+	<script src="/src/js/app.js" defer></script>
+
+</head>
+<body>
+	<div class="mobileHeader">
+		<div class="changeTheme">
+			<span class="icon-IcoMoon"></span>
+		</div>
+		<div class="mobileHeader__container">
+			<a href="/src/index.html" class="mobileHeader__logo">
+				<img src="/src/icons/dota2_logo_red.png" alt="logo">
+			</a>
+			<nav>
+				<ul class="header__menu mobileHeader__menu">
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">игра</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="/src/heroes.html" class="header__menu__btn mobileHeader__menu__btn">герои</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">новости</a></li>
+					<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">киберспорт</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+	<section class="promo hero-features__promo">
+		<div data-speed=".9" class="layer layer__base layer__hero"></div>
+		<div class="promo__container">
+			<header class="header">
+				<a href="/src/index.html" class="header__logo">
+					<img src="/src/icons/dota2_logo_red.png" alt="logo">
+				</a>
+				<nav>
+					<ul class="header__menu">
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">игра</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/heroes.html" class="header__menu__btn">герои</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="/src/news.html" class="header__menu__btn">новости</a>
+						</li>
+						<li class="header__menu__item">
+							<a href="" class="header__menu__btn">киберспорт</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+					<span class="icon-steam_logo"></span>
+					<span>играть бесплатно</span> 
+				</a>
+				<div class="changeTheme">
+					<span class="icon-IcoMoon"></span>
+				</div>
+			</header>
+	
+		<div class="hero-features herolist-heroPage">
+			<div class="hero-features__image herolist-heroPage__image__invoker">
+				<div class="hero-features__image__wrapper">
+					<div class="hero-features__name herolist-heroPage__name">Invoker</div>
+					<div class="hero-features__heroType intelligence-main">
+						<div class="heroType-strength"></div>
+						<div class="heroType-agility"></div>
+						<div class="heroType-intelligence"></div>
+					</div>
+				</div>
+				<div class="hero-features__image__descr">
+					Благодаря обширному арсеналу заклинаний Invoker может приспособиться к ходу любой битвы. Комбинируя три магичесих компонента, он может сотворить одно из десяти заклинаний, позволяющих уничтожить врага или спастись от него.
+				</div>
+				<div class="hero-features__image__fadeContainer"></div>
+			</div>
+			<div class="hero-features__content">
+				<div class="hero-features__content__menu">
+					<div class="hero-features__content__menu__abilities">abilities</div>
+					<div class="hero-features__content__menu__lore">lore</div>
+				</div>
+				<div class="hero-features__content__abilities active">
+					<ul class="skills">
+						<li class="skill" id="skill-1">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_quas.png" alt="skill-1" class="skill__icon skill__icon-1">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">QUAS</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-2">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_wex.png" alt="skill-2" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">WEX</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-3">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_exort.png" alt="skill-3" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">EXORT</div>
+							</div>
+						</li>
+						<li class="skill" id="skill-4">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_invoke.png" alt="skill-4" class="skill__icon">
+							<div class="skill__wrapper">
+								<div class="skill__wrapper__name">INVOKE</div>
+							</div>
+						</li>
+					</ul>
+					<div class="skill__descr">
+						<div class="skill__descr__characteristic">
+							<img src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/invoker_quas.png" alt="skill-descr" class="skill__descr__icon">
+							<div class="skill__descr__wrapper">
+								<div class="skill__descr__wrapper__name">QUAS</div>
+								<div class="skill__descr__wrapper__text">Позволяет управлять стихией льда и даёт +2 к силе за уровень. Каждая активная сфера Quas увеличивает восстановление здоровья.</div>
+							</div>
+						</div>
+						<video class="skill__descr__video" autoplay="" preload="auto" loop="" playsinline="" muted="">
+							<source class="video-source-webm" type="video/webm" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/invoker/invoker_quas.webm">
+							<source class="video-source-mp4" type="video/mp4" src="https://cdn.cloudflare.steamstatic.com/apps/dota2/videos/dota_react/abilities/invoker/invoker_quas.mp4">
+						</video>
+					</div>
+				</div>
+				<div class="hero-features__content__lore">
+					Магия в своей самой ранней, даже можно сказать, самой мощной форме, всегда являлась в основном искусством памяти. Она не требовала техник, палочек или других принадлежностей, за исключением разума самого чародея. Всё, что ему было нужно — мнемонические средства, помогающие колдующему вспомнить в полных деталях ту психологическую формулу, что раскроет магическую силу.<br><br>
+
+					Величайшие волшебники тех дней были одарены отличной памятью, а сами заклинания были настолько сложны и громоздки, что чародеи были вынуждены на чем-то специализироваться. Однако даже самые отличные волшебники могли надеяться лишь на то, что они они запомнят за всю свою жизнь три-четыре заклинания, не более. Обычные маги знали всего два заклинания, так что это не такое уж и необычное явление, когда деревенский чародей знал только одно заклинание, да и то требовало титанических усилий, куч подсказок и инструкций, работающих, как лекарство от забывчивости, в те редкие случаи, когда это самое заклинание просили продемонстрировать.
+					<br><br>
+					Но среди всех этих волшебников было всего одно, но гениальное и владеющее огромной памятью исключение, и имя ему — Invoker. Уже в своей юности взрослый не по годам волшебник сумел набить руку на использовании не четырёх, не пяти, и даже не семи, а не менее десятка заклинаний, которые он сотворял практически мгновенно! Ещё больше он уже и так знал, но просто считал бесполезными. Одно из его заклинаний — Sempiternal Cantrap — было такой огромной мощи, что следы от его использования в первые дни создания мира видны до сих пор (или просто расщеплены на атомы).
+					<br><br>
+					Большинство почти-бессмертных живут тихо, пряча от мира свой секрет, но Invoker — отнюдь не тот, кто хранит свой дар в кладовке. Он — древний, знающий гораздо больше остальных, разум которого все ещё имеет свободное место для рассуждений о смысле существования… как и для колдовства, которым он развлекает себя, наблюдая за последними днями этого мира.
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	<footer class="footer">
+		<div class="section__title">
+			<div class="section__title__smokeTop"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2">
+					<img class="dotalogo" src="/src/icons/dota2_logo_red.png" alt="">
+				</div>
+				<div class="col-md-8">
+					<div class="footer__descr"> 
+						Dota и логотип Dota являются товарными знаками и/или зарегистрированными товарными знаками Wolf Corporation. 2023
+						Wolf Corporation, все права защищены.
+					</div>
+				</div>
+				<div class="col-md-2">
+					<img class="vaclogo" src="https://pic.rutubelist.ru/video/78/e9/78e9e07a74662f8966f8c70c08ed794b.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

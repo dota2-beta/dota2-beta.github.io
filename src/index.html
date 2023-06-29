@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dota 2 BETA</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="/src/icons/main_icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/src/icons/main_icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/src/icons/main_icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/src/icons/main_icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/src/icons/main_icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/src/icons/main_icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/src/icons/main_icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/src/icons/main_icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/src/icons/main_icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/src/icons/main_icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/src/icons/main_icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/src/icons/main_icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/src/icons/main_icon/favicon-16x16.png">
+	<link rel="manifest" href="/src/icons/main_icon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/src/icons/main_icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/font.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+	<script src="js/smoothScroll.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/dropdows.js" defer></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<div class="mobileHeader">
+				<div class="changeTheme">
+					<span class="icon-IcoMoon"></span>
+				</div>
+				<div class="mobileHeader__container">
+					<a href="#" class="mobileHeader__logo">
+						<img src="icons/dota2_logo_red.png" alt="logo">
+					</a>
+					<nav>
+						<ul class="header__menu mobileHeader__menu">
+							<li class="header__menu__item mobileHeader__menu__item"><a href="#" class="header__menu__btn mobileHeader__menu__btn">игра</a></li>
+							<li class="header__menu__item mobileHeader__menu__item"><a href="/src/heroes.html" class="header__menu__btn mobileHeader__menu__btn">герои</a></li>
+							<li class="header__menu__item mobileHeader__menu__item"><a href="/src/news.html" class="header__menu__btn mobileHeader__menu__btn">новости</a></li>
+							<li class="header__menu__item mobileHeader__menu__item"><a href="/src/cybersport.html" class="header__menu__btn mobileHeader__menu__btn">киберспорт</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="hamburger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+			<section class="promo">
+				<div data-speed=".10" class="layer layer__base layer__mainlayer"></div>
+				<div data-speed=".6" class="layer layer__middle"></div>
+				<div data-speed=".9" class="layer layer__front"></div>
+				<div class="promo__container">
+					<header class="header">
+						<div class="header__logo-wrapper">
+							<a href="index.html" class="header__logo">
+								<img src="icons/dota2_logo_red.png" alt="logo">
+							</a>
+							<div class="changeTheme changeThemeLogo">
+								<span class="icon-IcoMoon"></span>
+							</div>
+						</div>
+						
+						<nav>
+							<ul class="header__menu">
+								<li class="header__menu__item">
+									<div class="header__menu__btn header__menu__btn__game">
+										игра
+									</div>
+									<div class="header__menu__dropdown">
+										<a href="/src/pages/news/news-main.html" class="header__menu__dropdown__item">Главная новость</a>
+										<a href="/src/pages/news/news-main.html" class="header__menu__dropdown__item">Последнее изменение баланса</a>
+										<a href="https://steamcommunity.com/market/search?appid=570" class="header__menu__dropdown__item">Торговая площадка</a>
+									</div>
+								</li>
+								<li class="header__menu__item">
+									<a href="/src/heroes.html" class="header__menu__btn">герои</a>
+								</li>
+								<li class="header__menu__item">
+									<a href="/src/news.html" class="header__menu__btn">новости</a>
+								</li>
+								<li class="header__menu__item">
+									<a href="/src/cybersport.html" class="header__menu__btn">киберспорт</a>
+								</li>
+							</ul>
+						</nav>
+						<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+							<span class="icon-steam_logo"></span>
+							<span>играть бесплатно</span> 
+						</a>
+						<div class="changeTheme changeThemeRight">
+							<span class="icon-IcoMoon"></span>
+						</div>
+					</header>
+					<div class="promo__bottom">
+						<div class="promo__bottom__wrap">
+							<h1 class="promo__title">DOTA 2 - МНОГОПОЛЬЗОВАТЕЛЬСКАЯ <br>
+								КОМАНДНАЯ КОМПЬЮТЕРНАЯ ИГРА</h1>
+							<h2 class="promo__subtitle">ГЛАВНЫЙ ПРЕДСТАВИТЕЛЬ ЖАНРА MOBA</h2>
+							<div class="horizBar"></div>
+						</div>
+						<a href="https://store.steampowered.com/app/570/Dota_2/" class="steamBtn" style="text-decoration: none; color: #fff;">
+							<span class="icon-steam_logo"></span>
+							<div class="steamBtn__text">
+								<div class="steamBtn__text__main">играть бесплатно</div>
+								<div class="steamBtn__text__add">СКАЧАТЬ В STEAM</div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="news">
+				<div class="section__title">
+					<div class="section__title__smokeTop"></div>
+					<div class="left__horizBar"></div>
+					<div class="section__name">ПОСЛЕДНИЕ НОВОСТИ</div>
+					<div class="right__horizBar"></div>
+					<div class="section__title__smokeBot"></div>
+				</div>
+				<div class="news__main">
+					<div class="layer layer__base"></div>
+					<div data-speed=".7" class="layer layer__middle"></div>
+					<div data-speed=".6" class="layer layer__front layer__front__logo"></div>
+					<div class="container">
+						<div class="row">
+							<div class="col-6 offset-md-1 col-md-10 offset-lg-1 col-lg-10">
+								<div class="news__main__update">
+									<a href="/src/pages/news/news-main.html" class="blogContainer" style="background-image: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/a85289fa2be0854a08a57f8c76d927c1cd38e385.jpg');background-size:cover; background-repeat: no-repeat; background-position: center;">
+										<div class="blogContainer__fadeContainer">
+										</div>
+										<div class="blogContainer__mainText">
+											Мы уже довольно долго работали над крайне амбициозным обновлением, и вот оно вышло.
+										</div>
+										<div class="blogContainer__title">
+											Долгожданное обновление баланса. Обновление 7.32f.
+										</div>
+										<div class="blogContainer__Date">
+											8 мая 2023 г.
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xl-4">
+								<div class="news__main__otherUpdates">
+									<a href="/src/pages/news/news-9.html" class="blogContainer" style="background-image: url('https://cdn.cloudflare.steamstatic.com/apps/dota2/images/techies/bg_02.jpg');background-size:cover; background-repeat: no-repeat; background-position: center;">
+										<div class="blogContainer__fadeContainer"></div>
+										<div class="blogContainer__mainText blogContainer__mainText_otherUp">
+											По многочисленным просьбам герою Techies вернули все способности патча 7.30. Новые способности удалены.
+										</div>
+										<div class="blogContainer__title">
+											Изменения обновления 7.31 отменены. Techies вернулся.
+										</div>
+										<div class="blogContainer__Date">
+											24 апреля 2023 г.
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-lg-4 col-xl-4">
+								<div class="news__main__otherUpdates">
+									<a href="/src/pages/news/news-6.html" class="blogContainer"
+									style="background-image: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/d5d396eb58a140b019e4f9efbff79dbd6ae69661.jpg');background-size:cover; background-repeat: no-repeat; background-position: center;">
+										<div class="blogContainer__fadeContainer">
+										</div>
+										<div class="blogContainer__mainText blogContainer__mainText_otherUp">
+											Команда Dota 2 сердечно поздравляет Gaimin Gladiators с невероятной победой на Лимском мейджоре.
+										</div>
+										<div class="blogContainer__title">
+											Начало весеннего тура
+										</div>
+										<div class="blogContainer__Date">
+											11 марта 2023 г.
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-6 col-md-4 col-xl-4 col-lg-4">
+								<div class="news__main__otherUpdates">
+									<a href="/src/pages/news/news-5.html" class="blogContainer" style="background-image: url('https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/clans/3703047/eed29f6e3869ae971f31126c94bae2e249332ad6.png');background-size:cover; background-repeat: no-repeat; background-position: center;">
+										<div class="blogContainer__fadeContainer">
+										</div>
+										<div class="blogContainer__mainText blogContainer__mainText_otherUp">
+											В битву Древних вступает правая рука Смерти — стреляющая точно в цель, вооружённая до зубов и не жалеющая пуль.
+										</div>
+										<div class="blogContainer__title">
+											Обновление «Смертная расплата»
+										</div>
+										<div class="blogContainer__Date">
+											7 марта 2023 г.
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mainBtn">
+						<div class="mainBtn__descr">Все новости</div>
+					</div>
+				</div>
+			</section>
+			<section class="heroes">
+				<div class="section__title section__title_heroes">
+					<div class="section__title__smokeTop"></div>
+					<div class="left__horizBar"></div>
+					<div class="section__name">герои</div>
+					<div class="right__horizBar"></div>
+					<div class="section__title__smokeBot section__title__smokeBot_heroes"></div>
+				</div>
+				<div class="heroes__wrapper"> 
+					<div class="heroesList">
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-1" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-1" class="heroesList__item__name">morfling</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-2" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-2" class="heroesList__item__name">Ancient Apparition</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-3" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-3" class="heroesList__item__name">puck</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-4" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-4" class="heroesList__item__name">enigma</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-5" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-5" class="heroesList__item__name">sralk</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-6" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-6" class="heroesList__item__name">templar assasin</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-7" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-7" class="heroesList__item__name">witch doctor</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-8" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-8" class="heroesList__item__name">anti-mage</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-9" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-9" class="heroesList__item__name">lion</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-10" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-10" class="heroesList__item__name">queen of pain</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-11" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-11" class="heroesList__item__name">troll warlord</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-12" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-12" class="heroesList__item__name">Centaur Warrunner</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-13" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-13" class="heroesList__item__name">silencer</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-14" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-14" class="heroesList__item__name">huskar</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-15" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-15" class="heroesList__item__name">omniknight</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-16" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-16" class="heroesList__item__name">sven</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-17" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-17" class="heroesList__item__name">Death Prophet</span>
+						</a> 
+						<!-- 17 -->
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-18" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-18" class="heroesList__item__name">phantom assassin</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-19" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-19" class="heroesList__item__name">razor</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-20" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-20" class="heroesList__item__name">leshrac</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-21" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-21" class="heroesList__item__name">tusk</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-22" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-22" class="heroesList__item__name">ogre magi</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-23" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-23" class="heroesList__item__name">meepo</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-24" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-24" class="heroesList__item__name">slardar</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-25" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-25" class="heroesList__item__name">jakiro</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-26" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-26" class="heroesList__item__name">ursa</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-27" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-27" class="heroesList__item__name">shadow fiend</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-28" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-28" class="heroesList__item__name">doom</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-29" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-29" class="heroesList__item__name">warlock</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-30" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-30" class="heroesList__item__name">wraith king</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-31" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-31" class="heroesList__item__name">bounty hunter</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-32" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-32" class="heroesList__item__name">chen</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-33" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-33" class="heroesList__item__name">tiny</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-34" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-34" class="heroesList__item__name">undying</span>
+						</a>
+						<!-- 17 -->
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-35" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-35" class="heroesList__item__name">storm spirit</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-36" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-36" class="heroesList__item__name">drow ranger</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-37" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-37" class="heroesList__item__name">crystal maiden</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-38" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-38" class="heroesList__item__name">kunkka</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-39" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-39" class="heroesList__item__name">mirana</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-40" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-40" class="heroesList__item__name">spectre</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-41" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-41" class="heroesList__item__name">sniper</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-42" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-42" class="heroesList__item__name">magnus</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-43" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-43" class="heroesList__item__name">axe</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-44" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-44" class="heroesList__item__name">lina</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-45" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-45" class="heroesList__item__name">clinkz</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-46" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-46" class="heroesList__item__name">bloodseeker</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-47" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-47" class="heroesList__item__name">lycan</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-48" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-48" class="heroesList__item__name">pudge</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-49" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-49" class="heroesList__item__name">tidehunter</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-50" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-50" class="heroesList__item__name">viper</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-51" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-51" class="heroesList__item__name">weaver</span>
+						</a>
+						<!-- 17 -->
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-52" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-52" class="heroesList__item__name">riki</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-53" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-53" class="heroesList__item__name">night stalker</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-54" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-54" class="heroesList__item__name">lich</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-55" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-55" class="heroesList__item__name">luna</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-56" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-56" class="heroesList__item__name">tinker</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-57" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-57" class="heroesList__item__name">broodmother</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-58" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-58" class="heroesList__item__name">clockwerk</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-59" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-59" class="heroesList__item__name">Skywrath Mage</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-60" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-60" class="heroesList__item__name">brewmaster</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-61" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-61" class="heroesList__item__name">phantom lancer</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-62" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-62" class="heroesList__item__name">chaos knight</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-63" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-63" class="heroesList__item__name">shadow shaman</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-64" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-64" class="heroesList__item__name">earthshaker</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-65" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-65" class="heroesList__item__name">keeper of the light</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-66" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-66" class="heroesList__item__name">treant protector</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-67" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-67" class="heroesList__item__name">pugna</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-68" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-68" class="heroesList__item__name">necrophos</span>
+						</a>
+						<!-- 17 -->
+						<a href="/src/pages/heroes/abaddon.html" class="heroesList__item">
+							<span id="heroesList__item__image-69" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-69" class="heroesList__item__name">abaddon</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-70" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-70" class="heroesList__item__name">spirit breaker</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-71" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-71" class="heroesList__item__name">vengeful spirit</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-72" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-72" class="heroesList__item__name">zeus</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-73" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-73" class="heroesList__item__name">disruptor</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-74" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-74" class="heroesList__item__name">dark seer</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-75" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-75" class="heroesList__item__name">faceless void</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-76" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-76" class="heroesList__item__name">invoker</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-77" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-77" class="heroesList__item__name">dazzle</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-78" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-78" class="heroesList__item__name">juggernaut</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-79" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-79" class="heroesList__item__name">bristleback</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-80" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-80" class="heroesList__item__name">elder titan</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-81" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-81" class="heroesList__item__name">sand king</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-82" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-82" class="heroesList__item__name">windranger</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-83" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-83" class="heroesList__item__name">Nature's Prophet</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-84" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-84" class="heroesList__item__name">venomancer</span>
+						</a>
+						<a href="#" class="heroesList__item">
+							<span id="heroesList__item__image-85" class="heroesList__item__image"></span>
+							<span id="heroesList__item__name-85" class="heroesList__item__name">medusa</span>
+						</a>
+						<!-- 17 -->
+					</div>
+					<div class="heroesListAdd">
+						<a href="/src/pages/heroes/visage.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-1" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-1" class="heroesListAdd__item__name">visage</span>
+						</a>
+						<a href="/src/pages/heroes/gyro.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-2" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-2" class="heroesListAdd__item__name">gyrocopter</span>
+						</a>
+						<a href="/src/pages/heroes/io.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-3" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-3" class="heroesListAdd__item__name">io</span>
+						</a>
+						<a href="/src/pages/heroes/beastmaster.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-4" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-4" class="heroesListAdd__item__name">beastmaster</span>
+						</a>
+						<a href="/src/pages/heroes/nyxAssassin.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-5" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-5" class="heroesListAdd__item__name">nyx assassin</span>
+						</a><a href="/src/pages/heroes/bane.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-6" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-6" class="heroesListAdd__item__name">bane</span>
+						</a>
+						<a href="/src/pages/heroes/rubick.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-7" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-7" class="heroesListAdd__item__name">rubick</span>
+						</a>
+						<a href="/src/pages/heroes/alchemist.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-8" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-8" class="heroesListAdd__item__name">alchemist</span>
+						</a>
+						<a href="/src/pages/heroes/techies.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-9" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-9" class="heroesListAdd__item__name">techies</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-10" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-10" class="heroesListAdd__item__name">naga siren</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-11" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-11" class="heroesListAdd__item__name">shadow demon</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-12" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-12" class="heroesListAdd__item__name">timbersaw</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-13" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-13" class="heroesListAdd__item__name">dragon knight</span>
+						</a>
+						<a href="/src/pages/heroes/batrider.html" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-14" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-14" class="heroesListAdd__item__name">batrider</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-15" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-15" class="heroesListAdd__item__name">lone druid</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-16" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-16" class="heroesListAdd__item__name">enchantress</span>
+						</a>
+						<a href="" class="heroesListAdd__item">
+							<span id="heroesListAdd__item__image-17" class="heroesListAdd__item__image"></span>
+							<span id="heroesListAdd__item__name-17" class="heroesListAdd__item__name">obsidian destroyer</span>
+						</a>
+					</div>
+					<div class="heroes__wrapper__content">
+						<div class="heroes__wrapper__content__subtitle">выберите</div>
+						<div class="heroes__wrapper__content__title">героя</div>
+						<div class="heroes__wrapper__content__descr">В игре насчитывается более 120 героев, 
+							каждый из которых имеет уникальные способности, характеристики и внешний вид.</div>
+						<a href="/src/heroes.html" class="mainBtn">
+							<div class="mainBtn__descr">Выбрать героя</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="cybersport">
+				<div class="section__title section__title_cybersport">
+					<div class="section__title__smokeTop"></div>
+					<div class="left__horizBar"></div>
+					<div class="section__name">Турниры</div>
+					<div class="right__horizBar"></div>
+					<div class="section__title__smokeBot"></div>
+				</div>
+				<div class="cybersport__wrapper">
+					<div class="fadeContainer"></div>
+					<div class="cybersport__wrapper__content">
+						<div class="cybersport__wrapper__content__title">САМАЯ ПОПУЛЯРНАЯ КИБЕРСПОРТИВНАЯ ИГРА В МИРЕ</div>
+						<div class="cybersport__wrapper__content__descr">Нет другой игры с таким количеством турниров, как Dota 2. <br>
+							The International — крупнейший киберспортивный турнир во всей игровой индустрии.</div>
+						<a href="/src/cybersport.html" class="mainBtn">
+							<div class="mainBtn__descr">Турниры</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="joinBattle">
+				<div class="section__title">
+					<div class="section__title__smokeTop"></div>
+					<div class="section__title__smokeBot"></div>
+				</div>
+				<div class="joinBattle__container">
+					<div class="section__title section__title_joinBattle">
+						<div class="left__horizBar"></div>
+						<div class="section__name">Присоединяйся к битве</div>
+						<div class="right__horizBar"></div>
+					</div>
+					<a href="https://store.steampowered.com/app/570/Dota_2/" class="mainBtn mainBtn__joinBattle">
+						<div class="mainBtn__descr">Играть бесплатно</div>
+					</a>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="section__title">
+					<div class="section__title__smokeTop"></div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-2">
+							<img class="dotalogo" src="/src/icons/dota2_logo_red.png" alt="">
+						</div>
+						<div class="col-md-8">
+							<div class="footer__descr"> 
+								Dota и логотип Dota являются товарными знаками и/или зарегистрированными товарными знаками Wolf Corporation. 2023
+								Wolf Corporation, все права защищены.
+							</div>
+						</div>
+						<div class="col-md-2">
+							<img class="vaclogo" src="https://pic.rutubelist.ru/video/78/e9/78e9e07a74662f8966f8c70c08ed794b.png" alt="">
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

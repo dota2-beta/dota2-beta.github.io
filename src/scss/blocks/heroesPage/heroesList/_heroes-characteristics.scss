@@ -1,0 +1,66 @@
+.herolist-heroPage {
+	//background: url('/src/img/heroesList/greyfade.png') center (center / cover) no-repeat;
+	&__image {
+		&__abaddon {
+			background: url('/src/img/heroesList/heroes/abaddon/abaddon.jpg') center (center / cover) no-repeat;
+		}
+		&__techies {
+			background: url('/src/img/heroesList/heroes/techies/techies.jpg') center (center / cover) no-repeat;
+		}
+		&__muerta {
+			background: url('/src/img/heroesList/heroes/muerta/muerta.jpg') center (center / cover) no-repeat;
+		}
+		&__alchemist {
+			background: url('/src/img/heroesList/heroes/alchemist/alchemist.jpg') center (center / cover) no-repeat;
+		}
+		&__ancientApparition {
+			background: url('/src/img/heroesList/heroes/ancient_apparition/ancient_apparition.jpg') center (center / cover) no-repeat;
+			.hero-features__image__wrapper {
+				bottom: 65px;
+				.herolist-heroPage__name {
+					font-size: 40px;
+				}
+			}
+		}
+		&__darkWillow {
+			background: url('/src/img/heroesList/heroes/dark_willow/dark_willow.png') center (center / cover) no-repeat;
+		}
+		&__invoker {
+			background: url('/src/img/heroesList/heroes/invoker/invo.jpg') center (center / cover) no-repeat;
+		}
+		&__arcwarden {
+			background: url('/src/img/heroesList/heroes/arcWarden/arc.jpg') center (center / cover) no-repeat;
+		}
+		&__antimage {
+			background: url('/src/img/heroesList/heroes/antimage/antimage.jpg') center (center / cover) no-repeat;
+		}
+		&__axe {
+			background: url('/src/img/heroesList/heroes/axe/axe.jpg') center (center / cover) no-repeat;
+		}
+		&__bane {
+			background: url('/src/img/heroesList/heroes/bane/bane.jpg') center (center / cover) no-repeat;
+		}
+		&__batrider {
+			background: url('/src/img/heroesList/heroes/batrider/batrider.jpg') center (center / cover) no-repeat;
+		}
+		&__visage {
+			background: url('/src/img/heroesList/heroes/visage/visage.jpg') center (center / cover) no-repeat;
+		}
+		&__gyro {
+			background: url('/src/img/heroesList/heroes/gyrocopter/gyro.jpg') center (center / cover) no-repeat;
+		}
+		&__io {
+			background: url('/src/img/heroesList/heroes/io/io.jpg') center (center / cover) no-repeat;
+		}
+		&__beastmaster {
+			background: url('/src/img/heroesList/heroes/beastmaster/beastmaster.jpg') center (center / cover) no-repeat;
+		}
+		&__nyxAssassin {
+			background: url('/src/img/heroesList/heroes/nyxassassin/nyx.jpg') center (center / cover) no-repeat;
+		}
+		&__rubick {
+			background: url('/src/img/heroesList/heroes/rubick/rubick.jpg') center (center / cover) no-repeat;
+		}
+	}
+}
+

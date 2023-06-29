@@ -1,0 +1,515 @@
+.heroes {
+	min-height: 1150px;
+	&__wrapper {
+		position: relative;
+		min-height: 1080px;
+		background: url('/src/img/heroes/BEZIMENI.png') center (center / cover) no-repeat;
+		&__content {
+			position: absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			bottom: 7%;
+			&__subtitle{
+				font-weight: 700;
+				font-size: 32px;
+				text-align: center;
+				color: white;
+				text-transform: uppercase;
+			}
+			&__title {
+				font-weight: 700;
+				font-size: 52px;
+				text-align: center;
+				color: white;
+				text-transform: uppercase;
+			}
+			&__descr {
+				display: block;
+				max-width: 1100px;
+				margin: 0 auto;
+				font-weight: 700;
+				font-size: 28px;
+				text-align: center;
+				color: white;
+			}
+		}
+	}
+}
+
+.heroes__wrapper {
+	padding: 11px 0 0 0;
+	z-index: 1;
+	overflow: hidden;
+}
+.heroesList {
+	display: grid;
+	column-gap: 3px;
+	grid-template-columns: repeat(17, 109px);
+	grid-template-rows: repeat(5, 58px);
+	justify-content: center;
+	row-gap: 11px;
+	width: 100%;
+	height: 100%;
+	&__item {
+		width: 103px;
+		height: 60px;
+		overflow: hidden;
+		transition: all 0.2s;
+		&__image {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		&__name {
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 700;
+			color: #fff;
+			position: absolute;
+			bottom: -90%;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: all 0.4s;
+			text-shadow: 2px 2px 2px #000;//ffb650
+		}
+		&:hover {
+			text-decoration: none;
+			.heroesList__item__name {
+				bottom: 5%;
+			}
+			transform: scale(1.2);
+		}
+	}
+}
+#heroesList__item__image-1 {
+	background: url('/src/img/heroes/morfling.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-2 {
+	background: url('/src/img/heroes/ancient_apparition.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-3 {
+	background: url('/src/img/heroes/puck.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-4 {
+	background: url('/src/img/heroes/enigma.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-5 {
+	background: url('/src/img/heroes/slark.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-6 {
+	background: url('/src/img/heroes/templar_assassin.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-7 {
+	background: url('/src/img/heroes/witch_doctor.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-8 {
+	background: url('/src/img/heroes/antimage.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-9 {
+	background: url('/src/img/heroes/lion.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-10 {
+	background: url('/src/img/heroes/queen_of_pain.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-11 {
+	background: url('/src/img/heroes/troll_warlord.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-12 {
+	background: url('/src/img/heroes/centaur_warrunner.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-13 {
+	background: url('/src/img/heroes/silenser.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-14 {
+	background: url('/src/img/heroes/huskar.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-15 {
+	background: url('/src/img/heroes/omniknight.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-16 {
+	background: url('/src/img/heroes/sven.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-17 {
+	background: url('/src/img/heroes/death_prophet.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-18 {
+	background: url('/src/img/heroes/phantom_assassin.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-19 {
+	background: url('/src/img/heroes/razor.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-20 {
+	background: url('/src/img/heroes/leshrac.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-21 {
+	background: url('/src/img/heroes/tusk.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-22 {
+	background: url('/src/img/heroes/ogre_magi.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-23 {
+	background: url('/src/img/heroes/meepo.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-24 {
+	background: url('/src/img/heroes/slardar.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-25 {
+	background: url('/src/img/heroes/jakiro.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-26 {
+	background: url('/src/img/heroes/ursa.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-27 {
+	background: url('/src/img/heroes/shadow_fiend.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-28 {
+	background: url('/src/img/heroes/doom.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-29 {
+	background: url('/src/img/heroes/warlock.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-30 {
+	background: url('/src/img/heroes/wraith_king.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-31 {
+	background: url('/src/img/heroes/bounty_hunter.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-32 {
+	background: url('/src/img/heroes/chen.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-33 {
+	background: url('/src/img/heroes/tiny.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-34 {
+	background: url('/src/img/heroes/undying.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-35 {
+	background: url('/src/img/heroes/storm_spirit.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-36 {
+	background: url('/src/img/heroes/drow_ranger.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-37 {
+	background: url('/src/img/heroes/crystal_maiden.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-38 {
+	background: url('/src/img/heroes/kunkka.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-39 {
+	background: url('/src/img/heroes/mirana.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-40 {
+	background: url('/src/img/heroes/spectre.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-41 {
+	background: url('/src/img/heroes/sniper.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-42 {
+	background: url('/src/img/heroes/magnus.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-43 {
+	background: url('/src/img/heroes/axe.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-44 {
+	background: url('/src/img/heroes/lina.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-45 {
+	background: url('/src/img/heroes/clinkz.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-46 {
+	background: url('/src/img/heroes/bloodseeker.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-47 {
+	background: url('/src/img/heroes/lycan.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-48 {
+	background: url('/src/img/heroes/pudge.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-49 {
+	background: url('/src/img/heroes/tidehunter.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-50 {
+	background: url('/src/img/heroes/viper.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-51 {
+	background: url('/src/img/heroes/weaver.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-52 {
+	background: url('/src/img/heroes/riki.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-53 {
+	background: url('/src/img/heroes/night_stalker.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-54 {
+	background: url('/src/img/heroes/lich.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-55 {
+	background: url('/src/img/heroes/luna.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-56 {
+	background: url('/src/img/heroes/tinker.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-57 {
+	background: url('/src/img/heroes/broodmother.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-58 {
+	background: url('/src/img/heroes/clockwerk.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-59 {
+	background: url('/src/img/heroes/Skywrath_Mage.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-60 {
+	background: url('/src/img/heroes/brewmaster.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-61 {
+	background: url('/src/img/heroes/phantom_lancer.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-62 {
+	background: url('/src/img/heroes/chaos_knight.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-63 {
+	background: url('/src/img/heroes/shadow_shaman.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-64 {
+	background: url('/src/img/heroes/earthshaker.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-65 {
+	background: url('/src/img/heroes/keeper_of_the_light.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-66 {
+	background: url('/src/img/heroes/treant_protector.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-67 {
+	background: url('/src/img/heroes/pugna.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-68 {
+	background: url('/src/img/heroes/necrophos.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-69 {
+	background: url('/src/img/heroes/abaddon.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-70 {
+	background: url('/src/img/heroes/spirit_breaker.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-71 {
+	background: url('/src/img/heroes/vengeful_spirit.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-72 {
+	background: url('/src/img/heroes/zeus.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-73 {
+	background: url('/src/img/heroes/disruptor.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-74 {
+	background: url('/src/img/heroes/dark_seer.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-75 {
+	background: url('/src/img/heroes/faceless_void.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-76 {
+	background: url('/src/img/heroes/invoker.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-77 {
+	background: url('/src/img/heroes/dazzle.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-78 {
+	background: url('/src/img/heroes/juggernaut.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-79 {
+	background: url('/src/img/heroes/bristleback.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-80 {
+	background: url('/src/img/heroes/elder_titan.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-81 {
+	background: url('/src/img/heroes/sand_king.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-82 {
+	background: url('/src/img/heroes/windranger.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-83 {
+	background: url('/src/img/heroes/Natures_Prophet.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-84 {
+	background: url('/src/img/heroes/venomancer.png') center (center / cover) no-repeat;
+}
+#heroesList__item__image-85 {
+	background: url('/src/img/heroes/medusa.png') center (center / cover) no-repeat;
+}
+.heroesListAdd {
+	margin-top: 10px;
+	display: grid;
+	column-gap: 4px;
+	grid-template-columns: repeat(17, 109px);
+	grid-template-rows: 305px 2px 17px 20px 30px 37px 49px 60px;
+	justify-content: center;
+	row-gap: 5px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	&__item {
+		position: relative;
+		width: 103px;
+		height: 100%;
+		overflow: hidden;
+		transition: all 0.2s;
+		&__image {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+		&__name {
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			position: absolute;
+			bottom: -12%;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: all 0.5s;
+			text-shadow: 2px 2px 2px #000;//ffb650
+		}
+		&:nth-child(1){
+			grid-row-start: 1;
+			grid-row-end: 9;
+		}
+		&:nth-child(2){
+			grid-row-start: 1;
+			grid-row-end: 8;
+		}
+		&:nth-child(3){
+			grid-row-start: 1;
+			grid-row-end: 7;
+		}
+		&:nth-child(4){
+			grid-row-start: 1;
+			grid-row-end: 6;
+		}
+		&:nth-child(5){
+			grid-row-start: 1;
+			grid-row-end: 5;
+		}
+		&:nth-child(6){
+			grid-row-start: 1;
+			grid-row-end: 4;
+		}
+		&:nth-child(7){
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+		&:nth-child(8){
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+		&:nth-child(9){
+			grid-row-start: 1;
+			grid-row-end: 1;
+		}
+		&:nth-child(10){
+			grid-row-start: 1;
+			grid-row-end: 2;
+		}
+		&:nth-child(11){
+			grid-row-start: 1;
+			grid-row-end: 3;
+		}
+		&:nth-child(12){
+			grid-row-start: 1;
+			grid-row-end: 4;
+		}
+		&:nth-child(13){
+			grid-row-start: 1;
+			grid-row-end: 5;
+		}
+		&:nth-child(14){
+			grid-row-start: 1;
+			grid-row-end: 6;
+		}
+		&:nth-child(15){
+			grid-row-start: 1;
+			grid-row-end: 7;
+		}
+		&:nth-child(16){
+			grid-row-start: 1;
+			grid-row-end: 8;
+		}
+		&:nth-child(17){
+			grid-row-start: 1;
+			grid-row-end: 9;
+		}
+		&:hover {
+			text-decoration: none;
+			.heroesListAdd__item__name {
+				bottom: 5%;
+			}
+			transform: scale(1.2);
+		}
+	}
+}
+#heroesListAdd__item__image-1 {
+	background: url('/src/img/heroes/visage.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-2 {
+	background: url('/src/img/heroes/gyrocopter.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-3 {
+	background: url('/src/img/heroes/io.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-4 {
+	background: url('/src/img/heroes/beastmaster.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-5 {
+	background: url('/src/img/heroes/nyx.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-6 {
+	background: url('/src/img/heroes/bane.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-7 {
+	background: url('/src/img/heroes/rubick.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-8 {
+	background: url('/src/img/heroes/alchemist.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-9 {
+	background: url('/src/img/heroes/techies.png') center (center / cover) no-repeat;
+}
+#heroesListAdd__item__image-10 {
+	background: url('/src/img/heroes/naga_siren.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-11 {
+	background: url('/src/img/heroes/shadow_demon.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-12 {
+	background: url('/src/img/heroes/timbersaw.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-13 {
+	background: url('/src/img/heroes/dragon_knight.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-14 {
+	background: url('/src/img/heroes/batrider.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-15 {
+	background: url('/src/img/heroes/lone_druid.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-16 {
+	background: url('/src/img/heroes/enchantress.png') center (center / cover) no-repeat;
+}
+
+#heroesListAdd__item__image-17 {
+	background: url('/src/img/heroes/obsidian_destroyer.png') center (center / cover) no-repeat;
+}
