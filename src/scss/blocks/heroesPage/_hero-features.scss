@@ -47,7 +47,7 @@
 		min-width: 260px;
 		max-height: 800px;
 		z-index: 2;
-		&:hover {
+		&:focus {
 			.hero-features__image__descr {
 				opacity: 1;
 			}

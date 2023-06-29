@@ -2239,10 +2239,10 @@ input {
   max-height: 800px;
   z-index: 2;
 }
-.hero-features__image:hover .hero-features__image__descr {
+.hero-features__image:focus .hero-features__image__descr {
   opacity: 1;
 }
-.hero-features__image:hover .hero-features__image__fadeContainer {
+.hero-features__image:focus .hero-features__image__fadeContainer {
   opacity: 1;
 }
 .hero-features__image__wrapper {
@@ -3879,6 +3879,9 @@ body.lightTheme .header__menu__dropdown__item:hover {
   }
   .hero-features__content__lore {
     font-size: 16px;
+  }
+  .hero-features__image__descr {
+    font-size: 18px;
   }
 }
 @media (max-width: 575px) {
